@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
-import Profile from "./components/Profile.vue";
+import Bio from "./components/Bio.vue";
 import SocialMedia from "./components/SocialMedia.vue";
 </script>
 
@@ -20,14 +20,10 @@ import SocialMedia from "./components/SocialMedia.vue";
 	</main> -->
 
 	<!-- <h1 class="text-3xl font-bold underline">Hello world!</h1> -->
-	<div class="bg-slate-800 flex w-100 h-100">
-		<div>
-			<img>
-		</div>
-		<div>
-			<div class="text-center">This site is a work in progress</div>
-			<SocialMedia/>
-		</div>
+	<div class="flex justify-center w-100 text-5xl my-10"><p>This site is still a WIP</p></div>
+	<div class="w-50 h-100">
+		<Bio/>
+		<!-- <SocialMedia/> -->
 	</div>
 </template>
 
@@ -38,6 +34,7 @@ import SocialMedia from "./components/SocialMedia.vue";
 	max-width: 1280px;
 	margin: 0 auto;
 	padding: 2rem;
+	height: 100vh;
 
 	font-weight: normal;
 }
