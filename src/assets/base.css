@@ -10,7 +10,7 @@
 	--vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
 
 	--vt-c-text-dark-1: var(--vt-c-white);
-	--vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+	--vt-c-text-dark-2: rgba(255, 255, 255, 0.64);
 }
 
 /* semantic color variables for this project */
@@ -39,10 +39,14 @@
 
 body {
 	min-height: 100vh;
+	max-height: 100vh;
 	min-width: 100vw;
 	max-width: 100vw;
+	overflow: auto;
 	color: var(--color-text);
 	background: rgb(30, 41, 59);
+	background-repeat: no-repeat;
+	background-size: auto;
 	line-height: 1.6;
 	font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 	Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
