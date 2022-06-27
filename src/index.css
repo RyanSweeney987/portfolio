@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+svg path {
+	fill: var(--color-text);
+}
+
+a:hover svg path {
+	fill: white;
+}
+
+button:hover svg path {
+	fill: white;
+}

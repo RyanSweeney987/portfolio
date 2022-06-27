@@ -5,16 +5,16 @@ defineProps<{
 	colourDir: string,
 	fromColour: string,
 	toColour: string,
-	bgSvg: string
+	bgSvg: string,
 }>()
 </script>
 
 <template>
-	<div class="rounded-lg p-0.5 mb-10 shadow-xl" :class="[colourDir, fromColour, toColour]">
-		<div class="lg:flex rounded-md shadow-lg p-4 bg-slate-800" v-bind:style="{ 'background-image': 'url(' + bgSvg  + ')' }">
+	<section class="rounded-lg p-0.5 mb-10 shadow-xl" :class="[colourDir, fromColour, toColour]">
+		<div class="rounded-md shadow-lg p-4 bg-slate-800" v-bind:style="{ 'background-image': 'url(' + bgSvg  + ')' }">
 			<slot name="content"></slot>
 		</div>
-	</div>
+	</section>
 </template>
 
 <style scoped>
