@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import YouTube from "./icons/social/YouTube.vue";
-import GitHub from "./icons/social/GitHub.vue";
-import Instagram from "./icons/social/Instagram.vue";
-import LinkedIn from "./icons/social/LinkedIn.vue";
-import IconLink from "./icons/ui/IconLink.vue";
+import YouTube from "../icons/social/YouTube.vue";
+import GitHub from "../icons/social/GitHub.vue";
+import Instagram from "../icons/social/Instagram.vue";
+import LinkedIn from "../icons/social/LinkedIn.vue";
+import IconLink from "../icons/IconLink.vue";
 
 </script>
 
@@ -11,7 +11,7 @@ import IconLink from "./icons/ui/IconLink.vue";
 	<div class="md:flex ">
 		<!-- Profile picture -->
 		<div class="w-50 flex justify-center md:block">
-			<img class="rounded-lg shadow-sm profile-pic" src="../assets/profile.jpg" loading="lazy"/>
+			<img class="rounded-lg shadow-sm profile-pic" src="../../assets/profile.jpg" loading="lazy"/>
 		</div>
 		<!-- Bio text -->
 		<div class="px-4 pt-2">
