@@ -4,34 +4,39 @@ import GitHub from "../icons/social/GitHub.vue";
 import Instagram from "../icons/social/Instagram.vue";
 import LinkedIn from "../icons/social/LinkedIn.vue";
 import IconLink from "../icons/IconLink.vue";
+import Profile from "../Profile.vue";
+
+const profileImageSrc = "/portfolio/src/assets/profile.jpg";
+
+defineProps<{
+	bgCol: string
+}>()
 
 </script>
 
 <template>
-	<div class="md:flex ">
-		<!-- Profile picture -->
-		<div class="w-50 flex justify-center md:block">
-			<img class="rounded-lg shadow-sm profile-pic" src="../../assets/profile.jpg" loading="lazy"/>
-		</div>
-		<!-- Bio text -->
-		<div class="px-4 pt-2">
-			<h1 class="text-3xl pb-4 text-white">Ryan Sweeney</h1>
-			<div class="bio-text">
-				<p class="mb-2">Hi! I'm a recent graduate from the <a class="link" href="https://www.lincoln.ac.uk/">University of Lincoln</a> with an expected 1st in <a class="link" href="https://www.lincoln.ac.uk/course/cgpcmpub/">Games Computing</a>.</p>
-				<p class="mb-2">Love playing video games and I enjoy working on game related projects in my spare time too. FinTech is the desired career path and have commercial experience in the personal debt industry. My biggest interested is in AI and it's potential applications. Other interests include 3D rendering, robotics, and aerospace.</p>
-			</div>
+	<Profile img-caption="TODO: Take a new picture">
+		<template v-slot:profile-image>
+			<img src="../../assets/profile.jpg" alt="Profile picture of Ryan Sweeney"/>
+		</template>
+		<template v-slot:profile-title>
+			<h1 class="text-3xl text-white">Ryan Sweeney</h1>
+		</template>
+		<template v-slot:profile-body>
+			<p class="mb-2">Hi! I'm a recent graduate from the <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/">University of Lincoln</a> with an expected 1st in <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/course/cgpcmpub/">Games Computing</a>.</p>
+			<p class="mb-2">Love playing video games and I enjoy working on game related projects in my spare time too. FinTech is the desired career path and have commercial experience in the personal debt industry. My biggest interested is in AI and it's potential applications. Other interests include 3D rendering, robotics, and aerospace.</p>
 			<div class="md:flex items-center">
 				<p>Based in Irvine, Scotland</p>
 				<div class="w-100 h-px my-4 md:w-px md:h-4 md:mx-10 md:my-0 bg-gray-200"></div>
 				<div class="flex flex-wrap w-100 justify-center md:justify-start">
-					<IconLink link="https://www.linkedin.com/in/ryanairth-sweeney/"><LinkedIn/></IconLink>
-					<IconLink link="https://github.com/RyanSweeney987"><GitHub/></IconLink>
-					<IconLink link="https://www.youtube.com/c/RyanAirth987/featured"><YouTube/></IconLink>
-					<IconLink link="https://www.instagram.com/sweeneygamedev/?hl=en"><Instagram/></IconLink>
+					<IconLink class="mx-1" :bg-col="bgCol" link="https://www.linkedin.com/in/ryanairth-sweeney/"><LinkedIn/></IconLink>
+					<IconLink class="mx-1" :bg-col="bgCol" link="https://github.com/RyanSweeney987" ><GitHub/></IconLink>
+					<IconLink class="mx-1" :bg-col="bgCol" link="https://www.youtube.com/c/RyanAirth987/featured"><YouTube/></IconLink>
+					<IconLink class="mx-1" :bg-col="bgCol" link="https://www.instagram.com/sweeneygamedev/?hl=en"><Instagram/></IconLink>
 				</div>
 			</div>
-		</div>
-	</div>
+		</template>
+	</Profile>
 </template>
 
 <style scoped>
@@ -47,16 +52,8 @@ import IconLink from "../icons/IconLink.vue";
 		}
 
 		.link {
-			@apply font-bold underline;
+			@apply font-bold underline rounded-sm;
 		}
-
-		.link:hover {
-			@apply bg-gradient-to-br from-orange-400 to-pink-500 rounded-sm;
-		}
-	}
-
-	a {
-		margin-right: 0.25rem;
 	}
 
 	a:hover {

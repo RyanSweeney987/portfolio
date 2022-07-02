@@ -27,6 +27,10 @@ import Java from "../icons/prog-langs/Java.vue";
 import Rust from "../icons/prog-langs/Rust.vue";
 import Angular from "../icons/prog-langs/Angular.vue";
 
+defineProps<{
+	bgCol: string
+}>()
+
 function clicked(lang: string) {
 	console.log("Clicked B - " + lang);
 }
@@ -36,48 +40,48 @@ function clicked(lang: string) {
 	<div class="w-100 md:flex md:flex-wrap">
 		<div class="skill-group-container">
 			<SkillGroup title="Proficient">
-				<IconButton @on-click="clicked('csharp')"><CSharp/></IconButton>
-				<IconButton @on-click="clicked('unity')"><Unity/></IconButton>
-				<IconButton @on-click="clicked('unrealengine')"><UnrealEngine/></IconButton>
-				<IconButton @on-click="clicked('typescript')"><Typescript/></IconButton>
-				<IconButton @on-click="clicked('css')"><CSS/></IconButton>
-				<IconButton @on-click="clicked('html')"><HTML/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('csharp')" :bg-col="bgCol"><CSharp/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('unity')" :bg-col="bgCol"><Unity/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('unrealengine')" :bg-col="bgCol"><UnrealEngine/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('typescript')" :bg-col="bgCol"><Typescript/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('css')" :bg-col="bgCol"><CSS/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('html')" :bg-col="bgCol"><HTML/></IconButton>
 			</SkillGroup>
 		</div>
 		<div class="skill-group-container">
 			<SkillGroup title="Used">
-				<IconButton @on-click="clicked('angular')"><Angular/></IconButton>
-				<IconButton @on-click="clicked('cplusplus')"><CPlusPlus/></IconButton>
-				<IconButton @on-click="clicked('dotnet')"><DotNet/></IconButton>
-				<IconButton @on-click="clicked('dotnetcore')"><DotNetCore/></IconButton>
-				<IconButton @on-click="clicked('javascript')"><Javascript/></IconButton>
-				<IconButton @on-click="clicked('opengl')"><OpenGL/></IconButton>
-				<IconButton @on-click="clicked('sass')"><SASS/></IconButton>
-				<IconButton @on-click="clicked('jquery')"><JQuery/></IconButton>
-				<IconButton @on-click="clicked('python')"><Python/></IconButton>
-				<IconButton @on-click="clicked('blender')"><Blender/></IconButton>
-				<IconButton @on-click="clicked('vuejs')"><VueJS/></IconButton>
-				<IconButton @on-click="clicked('tailwind')"><Tailwind/></IconButton>
-				<IconButton @on-click="clicked('tensorflow')"><Tensorflow/></IconButton>
-				<IconButton @on-click="clicked('mysql')"><MySQL/></IconButton>
-				<IconButton @on-click="clicked('java')"><Java/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('angular')" :bg-col="bgCol"><Angular/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('cplusplus')" :bg-col="bgCol"><CPlusPlus/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('dotnet')" :bg-col="bgCol"><DotNet/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('dotnetcore')" :bg-col="bgCol"><DotNetCore/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('javascript')" :bg-col="bgCol"><Javascript/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('opengl')" :bg-col="bgCol"><OpenGL/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('sass')" :bg-col="bgCol"><SASS/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('jquery')" :bg-col="bgCol"><JQuery/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('python')" :bg-col="bgCol"><Python/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('blender')" :bg-col="bgCol"><Blender/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('vuejs')" :bg-col="bgCol"><VueJS/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('tailwind')" :bg-col="bgCol"><Tailwind/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('tensorflow')" :bg-col="bgCol"><Tensorflow/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('mysql')" :bg-col="bgCol"><MySQL/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('java')" :bg-col="bgCol"><Java/></IconButton>
 			</SkillGroup>
 		</div>
 		<div class="skill-group-container">
 			<SkillGroup title="Dabbled">			
-				<IconButton @on-click="clicked('opencv')"><OpenCV/></IconButton>
-				<IconButton @on-click="clicked('r')"><R/></IconButton>
-				<IconButton @on-click="clicked('jupyter')"><Jupyter/></IconButton>
-				<IconButton @on-click="clicked('rust')"><Rust/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('opencv')" :bg-col="bgCol"><OpenCV/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('r')" :bg-col="bgCol"><R/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('jupyter')" :bg-col="bgCol"><Jupyter/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('rust')" :bg-col="bgCol"><Rust/></IconButton>
 			</SkillGroup>
 		</div>
 		<div class="skill-group-container">
 			<SkillGroup title="Portfolio Made With">
-				<IconButton @on-click="clicked('vuejs')"><VueJS/></IconButton>
-				<IconButton @on-click="clicked('html')"><HTML/></IconButton>
-				<IconButton @on-click="clicked('typescript')"><Typescript/></IconButton>
-				<IconButton @on-click="clicked('css')"><CSS/></IconButton>
-				<IconButton @on-click="clicked('tailwind')"><Tailwind/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('vuejs')" :bg-col="bgCol"><VueJS/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('html')" :bg-col="bgCol"><HTML/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('typescript')" :bg-col="bgCol"><Typescript/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('css')" :bg-col="bgCol"><CSS/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('tailwind')" :bg-col="bgCol"><Tailwind/></IconButton>
 			</SkillGroup>
 		</div>
 	</div>

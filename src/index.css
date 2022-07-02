@@ -13,3 +13,38 @@ a:hover svg path {
 button:hover svg path {
 	fill: white;
 }
+
+/* Override these for custom colours */
+@layer components { 
+	.background-1 {
+		@apply bg-gradient-to-br from-orange-400 to-pink-500;
+	}
+
+	.background-2 {
+		@apply bg-gradient-to-b from-sky-500 to-violet-500;
+	}
+
+	.background-3 {
+		@apply bg-gradient-to-l from-green-400 to-cyan-500;
+	}
+
+	.background-4 {
+		@apply bg-gradient-to-t from-fuchsia-500 to-purple-600;
+	}
+
+	.background-hover-1:hover {
+		@apply bg-gradient-to-br from-orange-400 to-pink-500;
+	}
+
+	.background-hover-2:hover {
+		@apply bg-gradient-to-b from-sky-500 to-violet-500;
+	}
+
+	.background-hover-3:hover {
+		@apply bg-gradient-to-l from-green-400 to-cyan-500;
+	}
+
+	.background-hover-4:hover {
+		@apply bg-gradient-to-t from-fuchsia-500 to-purple-600;
+	}	
+}

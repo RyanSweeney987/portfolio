@@ -1,11 +1,12 @@
 <script setup lang="ts">
 defineProps<{
 	link: string
+	bgCol: string
 }>()
 </script>
 
 <template>
-	<a class="link-icon" :href="link"><slot></slot></a>
+	<a class="link-icon" :class="bgCol" :href="link"><slot></slot></a>
 </template>
 
 <style>
@@ -13,11 +14,7 @@ defineProps<{
 
 	@layer components {
 		.link-icon {
-			@apply font-bold underline;
-		}
-
-		.link-icon:hover {
-			@apply bg-gradient-to-br from-orange-400 to-pink-500 rounded-sm;
+			@apply font-bold underline rounded-sm;
 		}
 	}
 

@@ -14,22 +14,22 @@ const happyIntersectionsBg = "\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 
 <template>
 	<div class="flex justify-center w-100 text-5xl my-10"><p>This site is still a WIP</p></div>
-	<Section colour-dir="bg-gradient-to-br" from-colour="from-orange-400" to-colour="to-pink-500" :bg-svg="jupiterBg">
+	<Section :bg-svg="jupiterBg" bg-col="bg-gradient-to-br from-orange-400 to-pink-500">
 		<template #content>
-			<Bio/>
+			<Bio bg-col="background-hover-1"/>
 		</template>
 	</Section>
-	<Section colour-dir="bg-gradient-to-b" from-colour="from-sky-500" to-colour="to-violet-500" :bg-svg="pointStarsBg">
+	<Section :bg-svg="pointStarsBg" bg-col="background-2">
 		<template #content>
-			<Skills/>
+			<Skills bg-col="background-hover-2"/>
 		</template>
 	</Section>
-	<Section colour-dir="bg-gradient-to-l" from-colour="from-green-400" to-colour="to-cyan-500" :bg-svg="cutoutBg">
+	<Section :bg-svg="cutoutBg" bg-col="bg-gradient-to-l from-green-400 to-cyan-500">
 		<template #content>
-			<WorkExperience/>
+			<WorkExperience bg-col="background-hover-3"/>
 		</template>
 	</Section>
-	<Section colour-dir="bg-gradient-to-t" from-colour="from-fuchsia-500" to-colour="to-purple-600" :bg-svg="happyIntersectionsBg">
+	<Section :bg-svg="happyIntersectionsBg" bg-col="bg-gradient-to-t from-fuchsia-500 to-purple-600">
 		<template #content>
 			<Projects/>
 		</template>

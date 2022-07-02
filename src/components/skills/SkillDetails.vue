@@ -19,4 +19,6 @@
 				More projects with this skill?
 				-- Button to show section --
 					View all?
+
+	
 </template>
