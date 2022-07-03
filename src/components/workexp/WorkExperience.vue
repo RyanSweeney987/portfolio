@@ -14,18 +14,21 @@ defineProps<{
 	bgCol: string
 }>()
 
+function clicked(lang: string) {
+	console.log("Clicked B - " + lang);
+}
 </script>
 
 <template>
-	<div class="w-100 flex flex-wrap">
-		<Card class="w-1/4" :bg-col="bgCol">
+	<div class="w-full flex flex-wrap">
+		<Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" @on-click="clicked('Cerebreon')">
 			<template v-slot:card-image>
 				<img class="with-background" src="../../assets/work/cerebreon-logo_RGB.png" alt="Company logo of Cerebreon Ltd."/>
 			</template>
 			<template v-slot:card-header>
 				<div class="flex justify-between">
-					<h1 class="text-l font-bold">Cerebreon Ltd.</h1>
-					<h1 class="text-l">2018 - 2021</h1>
+					<h4 class="text-l font-bold text-left">Cerebreon Ltd.</h4>
+					<h4 class="text-l text-right">2018 - 2021</h4>
 				</div>
 			</template>
 			<template v-slot:card-body>
@@ -35,14 +38,14 @@ defineProps<{
 				</div>
 			</template>
 			<template v-slot:card-footer>
-				<div class="flex lang-icon-container w-100">
-					<Icon class="mx-1 w-1/6"><DotNetCore/></Icon>
-					<Icon class="mx-1 w-1/6"><MySQL/></Icon>
-					<Icon class="mx-1 w-1/6"><Angular/></Icon>
-					<Icon class="mx-1 w-1/6"><CSharp/></Icon>
-					<Icon class="mx-1 w-1/6"><Typescript/></Icon>
-					<Icon class="mx-1 w-1/6"><HTML/></Icon>
-					<Icon class="mx-1 w-1/6"><CSS/></Icon>
+				<div class="flex lang-icon-container w-full">
+					<Icon class="mx-1"><DotNetCore/></Icon>
+					<Icon class="mx-1"><MySQL/></Icon>
+					<Icon class="mx-1"><Angular/></Icon>
+					<Icon class="mx-1"><CSharp/></Icon>
+					<Icon class="mx-1"><Typescript/></Icon>
+					<Icon class="mx-1"><HTML/></Icon>
+					<Icon class="mx-1"><CSS/></Icon>
 				</div>
 			</template>
 		</Card>

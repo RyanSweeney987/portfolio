@@ -37,7 +37,7 @@ function clicked(lang: string) {
 </script>
 
 <template>
-	<div class="w-100 md:flex md:flex-wrap">
+	<div class="w-full md:flex md:flex-wrap">
 		<div class="skill-group-container">
 			<SkillGroup title="Proficient">
 				<IconButton class="m-1" @on-click="clicked('csharp')" :bg-col="bgCol"><CSharp/></IconButton>
@@ -92,7 +92,7 @@ function clicked(lang: string) {
 
 	@layer components {
 		.skill-group-container {
-			@apply lg:px-5 mb-10 md:w-1/2 lg:w-1/4 lg:m-0;
+			@apply xl:px-5 mb-10 md:w-1/2 xl:w-1/4 xl:m-0; 
 		}
 	}
 </style>

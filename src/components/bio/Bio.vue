@@ -17,7 +17,9 @@ defineProps<{
 <template>
 	<Profile img-caption="TODO: Take a new picture">
 		<template v-slot:profile-image>
-			<img src="../../assets/profile.jpg" alt="Profile picture of Ryan Sweeney"/>
+			<div class="flex justify-center w-full md:w-auto">
+				<img class="w-auto h-auto bio-image aspect-square" src="../../assets/profile.jpg" alt="Profile picture of Ryan Sweeney"/>
+			</div>
 		</template>
 		<template v-slot:profile-title>
 			<h1 class="text-3xl text-white">Ryan Sweeney</h1>
@@ -27,8 +29,8 @@ defineProps<{
 			<p class="mb-2">Love playing video games and I enjoy working on game related projects in my spare time too. FinTech is the desired career path and have commercial experience in the personal debt industry. My biggest interested is in AI and it's potential applications. Other interests include 3D rendering, robotics, and aerospace.</p>
 			<div class="md:flex items-center">
 				<p>Based in Irvine, Scotland</p>
-				<div class="w-100 h-px my-4 md:w-px md:h-4 md:mx-10 md:my-0 bg-gray-200"></div>
-				<div class="flex flex-wrap w-100 justify-center md:justify-start">
+				<div class="w-full h-px my-4 md:w-px md:h-4 md:mx-10 md:my-0 bg-gray-200"></div>
+				<div class="flex flex-wrap w-full justify-center md:justify-start">
 					<IconLink class="mx-1" :bg-col="bgCol" link="https://www.linkedin.com/in/ryanairth-sweeney/"><LinkedIn/></IconLink>
 					<IconLink class="mx-1" :bg-col="bgCol" link="https://github.com/RyanSweeney987" ><GitHub/></IconLink>
 					<IconLink class="mx-1" :bg-col="bgCol" link="https://www.youtube.com/c/RyanAirth987/featured"><YouTube/></IconLink>
@@ -62,5 +64,12 @@ defineProps<{
 
 	.profile-pic {
 		max-width: 10rem;
+	}
+</style>
+
+<style>
+	.bio-image {
+		min-width: 4rem;
+		min-height: 4rem;
 	}
 </style>

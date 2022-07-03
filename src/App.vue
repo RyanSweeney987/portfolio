@@ -13,8 +13,8 @@ const happyIntersectionsBg = "\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 </script>
 
 <template>
-	<div class="flex justify-center w-100 text-5xl my-10"><p>This site is still a WIP</p></div>
-	<Section :bg-svg="jupiterBg" bg-col="bg-gradient-to-br from-orange-400 to-pink-500">
+	<div class="flex justify-center w-full text-5xl my-10"><p>This site is still a WIP</p></div>
+	<Section :bg-svg="jupiterBg" bg-col="background-1">
 		<template #content>
 			<Bio bg-col="background-hover-1"/>
 		</template>
@@ -24,14 +24,14 @@ const happyIntersectionsBg = "\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 			<Skills bg-col="background-hover-2"/>
 		</template>
 	</Section>
-	<Section :bg-svg="cutoutBg" bg-col="bg-gradient-to-l from-green-400 to-cyan-500">
+	<Section :bg-svg="cutoutBg" bg-col="background-3">
 		<template #content>
 			<WorkExperience bg-col="background-hover-3"/>
 		</template>
 	</Section>
-	<Section :bg-svg="happyIntersectionsBg" bg-col="bg-gradient-to-t from-fuchsia-500 to-purple-600">
+	<Section :bg-svg="happyIntersectionsBg" bg-col="background-4">
 		<template #content>
-			<Projects/>
+			<Projects bg-col="background-hover-4"/>
 		</template>
 	</Section>
 </template>

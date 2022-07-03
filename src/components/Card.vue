@@ -13,17 +13,17 @@ function _onClick() {
 </script>
 
 <template>
-	<button class="card" v-on:click="_onClick" :class="bgCol" type="button">
-		<div class="w-100 card-image">
+	<button class="card w-full" v-on:click="_onClick" :class="bgCol" type="button">
+		<div class="w-full card-image">
 			<slot name="card-image"></slot>
 		</div>
-		<div class="w-100 mb-2">
+		<div class="w-full mb-2">
 			<slot name="card-header"></slot>
 		</div>
-		<div class="w-100 mb-2">
+		<div class="w-full mb-2">
 			<slot name="card-body"></slot>
 		</div>
-		<div class="w-100">
+		<div class="w-full">
 			<slot name="card-footer"></slot>
 		</div>
 	</button>
