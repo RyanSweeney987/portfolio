@@ -1,14 +1,6 @@
 <script setup lang="ts">
 import Icon from "../icons/Icon.vue";
 import Card from "../../components/Card.vue";
-import Unity from "../icons/prog-langs/Unity.vue";
-import CSharp from "../icons/prog-langs/CSharp.vue";
-import UnrealEngine from "../icons/prog-langs/UnrealEngine.vue";
-import CPlusPlus from "../icons/prog-langs/CPlusPlus.vue";
-import SDL from "../icons/prog-langs/SDL.vue";
-
-import { usePageStore } from "@/stores/PageStore";
-const pageStore = usePageStore();
 
 defineProps<{
 	bgCol: string
@@ -18,12 +10,11 @@ const data = [];
 
 function clicked(lang: string) {
 	console.log("Clicked B - " + lang);
-	pageStore.page = "projects/" + lang;
 }
 </script>
 
 <template>
-	<div class="w-full flex flex-wrap">
+	<div class="w-full flex flex-wrap projects">
 		<!-- <Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" v-for="(item, index) in data" @on-click="clicked('')">
 			<template v-slot:card-image>
 				<img class="" src="../../assets/projects/city_gen_thumb.png" alt="Thumbnail of City Generator project made in Unity."/>
@@ -122,7 +113,7 @@ function clicked(lang: string) {
 			</template>
 			<template v-slot:card-footer>
 				<div class="flex lang-icon-container w-full">
-					<Icon class="mx-1" icon-name="CPlusPlus"><CPlusPlus/></Icon>
+					<Icon class="mx-1" icon-name="CPlusPlus"/>
 				</div>
 			</template>
 		</Card>
@@ -137,5 +128,12 @@ function clicked(lang: string) {
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+	}
+</style>
+
+<style>
+	.projects  .icon-container .icon {
+		width: 2rem;
+		height: 2rem;
 	}
 </style>

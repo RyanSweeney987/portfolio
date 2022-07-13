@@ -22,7 +22,7 @@ defineProps<{
 			</div>
 		</template>
 		<template v-slot:profile-title>
-			<h1 class="text-3xl text-white">Ryan Sweeney</h1>
+			<h1 class="text-3xl text-white text-center md:text-left">Ryan Sweeney</h1>
 		</template>
 		<template v-slot:profile-body>
 			<p class="mb-2">Hi! I'm a recent graduate from the <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/">University of Lincoln</a> with an expected 1st in <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/course/cgpcmpub/">Games Computing</a>.</p>

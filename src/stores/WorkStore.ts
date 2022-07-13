@@ -1,7 +1,7 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
-export const useWorkStore = defineStore("WorkStore", {
-	state: () => ({
-		page: "main"
-	})
-});
+// useStore could be anything like useUser, useCart
+// the first argument is a unique id of the store across your application
+export const useWorkStore = defineStore('workStore', {
+  // other options...
+})

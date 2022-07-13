@@ -1,0 +1,24 @@
+{
+	"routes": [
+		{
+			"id": "0",
+			"name": "Home",
+			"slug": ""
+		},
+		{
+			"id": "1",
+			"name": "Skill",
+			"slug": "skill"
+		},
+		{
+			"id": "2",
+			"name": "Work",
+			"slug": "work"
+		},
+		{
+			"id": "3",
+			"name": "Project",
+			"slug": "project"
+		}
+	]
+}

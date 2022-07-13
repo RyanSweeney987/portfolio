@@ -1,19 +1,8 @@
 <script setup lang="ts">
-import Profile from "../Profile.vue";
 import Icon from "../icons/Icon.vue";
 import Card from "../../components/Card.vue";
-import DotNetCore from "../icons/prog-langs/DotNetCore.vue";
-import Angular from "../icons/prog-langs/Angular.vue";
-import CSharp from "../icons/prog-langs/CSharp.vue";
-import HTML from "../icons/prog-langs/HTML.vue";
-import CSS from "../icons/prog-langs/CSS.vue";
-import Typescript from "../icons/prog-langs/Typescript.vue";
-import MySQL from "../icons/prog-langs/MySQL.vue";
 
 import cerebreonLogo from "@/assets/work/cerebreon-logo_RGB.png";
-
-import { usePageStore } from "@/stores/PageStore";
-const pageStore = usePageStore();
 
 defineProps<{
 	bgCol: string
@@ -21,12 +10,11 @@ defineProps<{
 
 function clicked(lang: string) {
 	console.log("Clicked B - " + lang);
-	pageStore.page = "work/" + lang;
 }
 </script>
 
 <template>
-	<div class="w-full flex flex-wrap">
+	<div class="w-full flex flex-wrap work-experience">
 		<Card class="m-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" @on-click="clicked('Cerebreon Technologies')">
 			<template v-slot:card-image>
 				<img class="with-background" :src="cerebreonLogo" alt="Company logo of Cerebreon Ltd."/>
@@ -66,5 +54,8 @@ function clicked(lang: string) {
 		scroll-behavior: auto;
 	}
 
-	
+	.work-experience .icon-container .icon {
+		width: 2rem;
+		height: 2rem;
+	}
 </style>
