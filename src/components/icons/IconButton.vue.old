@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import Icon from "./Icon.vue";
-
 defineProps<{
-	bgCol: string,
-	iconName: string
+	bgCol: string
 }>()
 
 const emits = defineEmits(['onClick']);
@@ -14,9 +11,7 @@ function _onClick() {
 </script>
 
 <template>
-	<button class="link-button" :class="bgCol" v-on:click="_onClick" type="button">
-		<Icon :icon-name="iconName"/>
-	</button>
+	<button class="link-button" :class="bgCol" v-on:click="_onClick" type="button"><slot></slot></button>
 </template>
 
 <style scoped>
@@ -37,7 +32,7 @@ function _onClick() {
 </style>
 
 <style>
-	.link-button .icon-container .icon {
+	.link-button svg {
 		width: 100%;
 		height: 100%;
 	}

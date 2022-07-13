@@ -4,6 +4,7 @@ import Section from "./components/Section.vue";
 import WorkExperience from "./components/workexp/WorkExperience.vue";
 import Projects from "./components/projects/Projects.vue";
 import Skills from "./components/skills/Skills.vue";
+import Icon from "./components/icons/Icon.vue";
 
 import { reactive } from "vue";
 
@@ -59,6 +60,7 @@ const happyIntersectionsBg = "\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.o
 <template>
 	<div class="flex justify-center w-full text-5xl my-10"><p>This site is still a WIP</p></div>
 	<div><p>Current page: <span>{{ pageStore.page }}</span></p></div>
+	<Icon2 icon-name="SDL"></Icon2>
 	<Section :bg-svg="jupiterBg" bg-col="background-1">
 		<template #content>
 			<Bio bg-col="background-hover-1"/>

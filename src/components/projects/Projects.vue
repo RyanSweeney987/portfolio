@@ -54,8 +54,8 @@ function clicked(lang: string) {
 			</template>
 			<template v-slot:card-footer>
 				<div class="flex lang-icon-container w-full">
-					<Icon class="mx-1"><Unity/></Icon>
-					<Icon class="mx-1"><CSharp/></Icon>
+					<Icon class="mx-1" icon-name="Unity"/>
+					<Icon class="mx-1" icon-name="CSharp"/>
 				</div>
 			</template>
 		</Card>
@@ -71,8 +71,8 @@ function clicked(lang: string) {
 			</template>
 			<template v-slot:card-footer>
 				<div class="flex lang-icon-container w-full">
-					<Icon class="mx-1"><UnrealEngine/></Icon>
-					<Icon class="mx-1"><CPlusPlus/></Icon>
+					<Icon class="mx-1" icon-name="UnrealEngine"/>
+					<Icon class="mx-1" icon-name="CPlusPlus"/>
 				</div>
 			</template>
 		</Card>
@@ -88,8 +88,8 @@ function clicked(lang: string) {
 			</template>
 			<template v-slot:card-footer>
 				<div class="flex lang-icon-container w-full">
-					<Icon class="mx-1"><Unity/></Icon>
-					<Icon class="mx-1"><CSharp/></Icon>
+					<Icon class="mx-1" icon-name="Unity"/>
+					<Icon class="mx-1" icon-name="CSharp"/>
 				</div>
 			</template>
 		</Card>
@@ -105,8 +105,8 @@ function clicked(lang: string) {
 			</template>
 			<template v-slot:card-footer>
 				<div class="flex lang-icon-container w-full">
-					<Icon class="mx-1"><SDL/></Icon>
-					<Icon class="mx-1"><CPlusPlus/></Icon>
+					<Icon class="mx-1" icon-name="SDL"/>
+					<Icon class="mx-1" icon-name="CPlusPlus"/>
 				</div>
 			</template>
 		</Card>
@@ -122,7 +122,7 @@ function clicked(lang: string) {
 			</template>
 			<template v-slot:card-footer>
 				<div class="flex lang-icon-container w-full">
-					<Icon class="mx-1"><CPlusPlus/></Icon>
+					<Icon class="mx-1" icon-name="CPlusPlus"><CPlusPlus/></Icon>
 				</div>
 			</template>
 		</Card>

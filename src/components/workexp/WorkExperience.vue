@@ -10,6 +10,8 @@ import CSS from "../icons/prog-langs/CSS.vue";
 import Typescript from "../icons/prog-langs/Typescript.vue";
 import MySQL from "../icons/prog-langs/MySQL.vue";
 
+import cerebreonLogo from "@/assets/work/cerebreon-logo_RGB.png";
+
 import { usePageStore } from "@/stores/PageStore";
 const pageStore = usePageStore();
 
@@ -27,7 +29,7 @@ function clicked(lang: string) {
 	<div class="w-full flex flex-wrap">
 		<Card class="m-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" @on-click="clicked('Cerebreon Technologies')">
 			<template v-slot:card-image>
-				<img class="with-background" src="../../assets/work/cerebreon-logo_RGB.png" alt="Company logo of Cerebreon Ltd."/>
+				<img class="with-background" :src="cerebreonLogo" alt="Company logo of Cerebreon Ltd."/>
 			</template>
 			<template v-slot:card-header>
 				<div class="flex justify-between">
@@ -44,13 +46,13 @@ function clicked(lang: string) {
 			</template>
 			<template v-slot:card-footer>
 				<div class="flex lang-icon-container w-full">
-					<Icon class="mx-1"><DotNetCore/></Icon>
-					<Icon class="mx-1"><MySQL/></Icon>
-					<Icon class="mx-1"><Angular/></Icon>
-					<Icon class="mx-1"><CSharp/></Icon>
-					<Icon class="mx-1"><Typescript/></Icon>
-					<Icon class="mx-1"><HTML/></Icon>
-					<Icon class="mx-1"><CSS/></Icon>
+					<Icon class="mx-1" icon-name="DotNetCore"/>
+					<Icon class="mx-1" icon-name="MySQL"/>
+					<Icon class="mx-1" icon-name="Angular"/>
+					<Icon class="mx-1" icon-name="CSharp"/>
+					<Icon class="mx-1" icon-name="Typescript"/>
+					<Icon class="mx-1" icon-name="HTML"/>
+					<Icon class="mx-1" icon-name="CSS"/>
 				</div>
 			</template>
 		</Card>
