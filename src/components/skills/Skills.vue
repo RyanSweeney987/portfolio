@@ -26,6 +26,10 @@ import R from "../icons/prog-langs/R.vue";
 import Java from "../icons/prog-langs/Java.vue";
 import Rust from "../icons/prog-langs/Rust.vue";
 import Angular from "../icons/prog-langs/Angular.vue";
+import SDL from "../icons/prog-langs/SDL.vue";
+
+import { usePageStore } from "@/stores/PageStore";
+const pageStore = usePageStore();
 
 defineProps<{
 	bgCol: string
@@ -33,6 +37,7 @@ defineProps<{
 
 function clicked(lang: string) {
 	console.log("Clicked B - " + lang);
+	pageStore.page = "skill/" + lang;
 }
 </script>
 
@@ -65,6 +70,7 @@ function clicked(lang: string) {
 				<IconButton class="m-1" @on-click="clicked('tensorflow')" :bg-col="bgCol"><Tensorflow/></IconButton>
 				<IconButton class="m-1" @on-click="clicked('mysql')" :bg-col="bgCol"><MySQL/></IconButton>
 				<IconButton class="m-1" @on-click="clicked('java')" :bg-col="bgCol"><Java/></IconButton>
+				<IconButton class="m-1" @on-click="clicked('sdl')" :bg-col="bgCol"><SDL/></IconButton>
 			</SkillGroup>
 		</div>
 		<div class="skill-group-container">
@@ -95,4 +101,6 @@ function clicked(lang: string) {
 			@apply xl:px-5 mb-10 md:w-1/2 xl:w-1/4 xl:m-0; 
 		}
 	}
+
+	
 </style>

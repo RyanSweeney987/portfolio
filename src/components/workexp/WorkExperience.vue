@@ -10,32 +10,37 @@ import CSS from "../icons/prog-langs/CSS.vue";
 import Typescript from "../icons/prog-langs/Typescript.vue";
 import MySQL from "../icons/prog-langs/MySQL.vue";
 
+import { usePageStore } from "@/stores/PageStore";
+const pageStore = usePageStore();
+
 defineProps<{
 	bgCol: string
 }>()
 
 function clicked(lang: string) {
 	console.log("Clicked B - " + lang);
+	pageStore.page = "work/" + lang;
 }
 </script>
 
 <template>
 	<div class="w-full flex flex-wrap">
-		<Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" @on-click="clicked('Cerebreon')">
+		<Card class="m-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" @on-click="clicked('Cerebreon Technologies')">
 			<template v-slot:card-image>
 				<img class="with-background" src="../../assets/work/cerebreon-logo_RGB.png" alt="Company logo of Cerebreon Ltd."/>
 			</template>
 			<template v-slot:card-header>
 				<div class="flex justify-between">
-					<h4 class="text-l font-bold text-left">Cerebreon Ltd.</h4>
+					<h4 class="text-l font-bold text-left">Cerebreon Technologies</h4>
 					<h4 class="text-l text-right">2018 - 2021</h4>
 				</div>
 			</template>
 			<template v-slot:card-body>
-				<div class="flex justify-between">
+				<div class="flex justify-between w-full">
 					<label class="font-bold">Title:</label>
 					<p>Developer</p>
 				</div>
+				<p>Full-stack development</p>
 			</template>
 			<template v-slot:card-footer>
 				<div class="flex lang-icon-container w-full">
@@ -58,21 +63,6 @@ function clicked(lang: string) {
 		overflow-x: auto;
 		scroll-behavior: auto;
 	}
-</style>
 
-	-- Work experience --
-	-- Profile --
-		-- Image --
-			Company logo?
-		-- Title --
-			Where?
-			When?
-		-- Profile Body --
-			What do they do?
-			What did I do?
-				Roles?
-					Junior/Mid/Senior?
-				Work type?
-					Remote/Hybrid/In Office?
-			-- Clickable to show skill details --
-				Languages/framworks?
+	
+</style>

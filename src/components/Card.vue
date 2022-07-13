@@ -14,16 +14,16 @@ function _onClick() {
 
 <template>
 	<button class="card w-full" v-on:click="_onClick" :class="bgCol" type="button">
-		<div class="w-full card-image">
+		<div class="card-image w-full">
 			<slot name="card-image"></slot>
 		</div>
-		<div class="w-full mb-2">
+		<div class="card-header w-full">
 			<slot name="card-header"></slot>
 		</div>
-		<div class="w-full mb-2">
+		<div class="card-body w-full">
 			<slot name="card-body"></slot>
 		</div>
-		<div class="w-full">
+		<div class="card-footer w-full">
 			<slot name="card-footer"></slot>
 		</div>
 	</button>
@@ -38,7 +38,20 @@ function _onClick() {
 		}
 
 		.card-image {
-			@apply mb-4;
+			background: black;
+			@apply mb-4 aspect-video rounded-lg;
+		}
+
+		.card-header {
+			@apply mb-2;
+		}
+
+		.card-body {
+			height: 3rem;
+			@apply mb-2;
+		}
+
+		.card-footer {
 		}
 	}
 </style>
@@ -56,9 +69,7 @@ function _onClick() {
 		}
 		
 		.card-image img {
-			min-width: 10rem;
-			min-height: auto;
-			@apply rounded-lg shadow-sm p-1;
+			@apply rounded-lg shadow-sm aspect-video;
 		}
 
 		.card-text p {
@@ -72,6 +83,6 @@ function _onClick() {
 
 	.card-image img {
 		width: 100%;
-		height: 100%;
+		height: auto;
 	}
 </style>
