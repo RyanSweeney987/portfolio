@@ -4,8 +4,8 @@
 
 <template>
 	<div class="flex justify-center w-full text-5xl my-10"><p>This site is still a WIP</p></div>
-	<div v-if="$route.name !== 'Home'">
-		<router-link to="/"><h1>BACK</h1></router-link>
+	<div v-if="$route.name !== 'Home'" class="mb-5">
+		<router-link to="/"><h1 class="w-full text-center">&lt&lt&lt BACK &lt&lt&lt</h1></router-link>
 	</div>
 	<router-view></router-view>
 </template>
