@@ -24,7 +24,7 @@ function clicked(slug: string) {
 	<div class="w-full flex flex-wrap projects">
 		<Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(project, index) in projectStore.projects" :bg-col="bgCol" @on-click="clicked(project.slug)">
 			<template v-slot:card-image>
-				<img :src="`/thumbs/projects/${project.imgSrc}`" :alt="project.imgAlt"/>
+				<img :src="`/portfolio/thumbs/projects/${project.imgSrc}`" :alt="project.imgAlt"/>
 			</template>
 			<template v-slot:card-header>
 				<h4>{{project.name}}</h4>
