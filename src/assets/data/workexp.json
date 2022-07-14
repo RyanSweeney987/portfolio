@@ -4,13 +4,13 @@
 			"id": "0",
 			"name": "Cerebreon Technologies",
 			"slug": "cerebreon-technologies",
-			"img": "",
-			"imgAlt": "",
+			"imgSrc": "cerebreon-logo_RGB.png",
+			"imgAlt": "Cerebreon Technologies company logo.",
 			"startDate": "2018",
 			"endDate": "2021",
 			"shortDesc": "Full-stack development",
-			"worktitle": "Developer",
-			"skillIds": []
+			"workTitle": "Developer",
+			"skillIds": [0, 3, 4, 6, 7, 12, 18, 22]
 		}
 	]
 }

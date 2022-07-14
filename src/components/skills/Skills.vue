@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
 import SkillGroup from "../skills/SkillGroup.vue";
 import IconButton from "../icons/IconButton.vue";
 
@@ -6,12 +7,14 @@ import { useSkillStore } from "@/stores/SkillStore";
 
 const skillStore = useSkillStore();
 
+const router = useRouter();
+
 defineProps<{
 	bgCol: string
 }>()
 
-function clicked(lang: string) {
-	console.log("Clicked B - " + lang);
+function clicked(slug: string) {
+	router.push(`/skill/${slug}`);
 }
 </script>
 

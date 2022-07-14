@@ -14,15 +14,16 @@ import './index.css'
 const pinia = createPinia()
 
 const routes = [
-	{ path: '/', name: "Home", component: Home },
-	{ path: '/skill/:slug', name: "Skill", component: Skill },
-	{ path: '/work/:slug', name: "Work", component: Work },
-	{ path: '/project/:slug', name: "Project", component: Project },
+	{ path: '/', name: "Home", component: Home, sensitive: true},
+	{ path: '/skill/:slug', name: "Skill", component: Skill, sensitive: true},
+	{ path: '/work/:slug', name: "Work", component: Work, sensitive: true},
+	{ path: '/project/:slug', name: "Project", component: Project, sensitive: true },
 ];
 
 const router = createRouter({
 	history: createWebHistory("/portfolio"),
 	routes, // short for `routes: routes`
+	strict: true
 });
 
 const app = createApp(App);
