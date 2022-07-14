@@ -2,7 +2,6 @@
 import IconButton from "./components/icons/IconButton.vue";
 import Icon from "./components/icons/Icon.vue";
 
-
 </script>
 
 <template>

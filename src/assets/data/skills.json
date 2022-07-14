@@ -1,0 +1,224 @@
+{	"skillLevels": [
+		{
+			"id": 0,
+			"name": "Proficient"
+		},{
+			"id": 1,
+			"name": "Used"
+		},{
+			"id": 2,
+			"name": "Dabbled"
+		}
+	],
+	"skills": [
+		{
+			"id": 0,
+			"name": "Angular",
+			"slug": "angular",
+			"icon": "Angular",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 1,
+			"name": "Blender",
+			"slug": "blender",
+			"icon": "Blender",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 2,
+			"name": "C++",
+			"slug": "c-plus-plus",
+			"icon": "CPlusPlus",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 3,
+			"name": "C#",
+			"slug": "c-sharp",
+			"icon": "CSharp",
+			"skillLevelId": 0,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 4,
+			"name": "CSS",
+			"slug": "css",
+			"icon": "CSS",
+			"skillLevelId": 0,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 5,
+			"name": ".Net",
+			"slug": "dot-net",
+			"icon": "DotNet",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 6,
+			"name": ".Net Core",
+			"slug": "dot-net-core",
+			"icon": "DotNetCore",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 7,
+			"name": "HTML",
+			"slug": "html",
+			"icon": "HTML",
+			"skillLevelId": 0,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 8,
+			"name": "Java",
+			"slug": "java",
+			"icon": "Java",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 9,
+			"name": "Javascript",
+			"slug": "javascript",
+			"icon": "Javascript",
+			"skillLevelId": 0,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 10,
+			"name": "JQuery",
+			"slug": "jquery",
+			"icon": "JQuery",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 11,
+			"name": "Jupyter",
+			"slug": "jupyter",
+			"icon": "Jupyter",
+			"skillLevelId": 2,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 12,
+			"name": "MySQL",
+			"slug": "mysql",
+			"icon": "MySQL",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 13,
+			"name": "OpenCV",
+			"slug": "opencv",
+			"icon": "OpenCV",
+			"skillLevelId": 2,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 14,
+			"name": "OpenGL",
+			"slug": "opengl",
+			"icon": "OpenGL",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 15,
+			"name": "Python",
+			"slug": "python",
+			"icon": "Python",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 16,
+			"name": "R",
+			"slug": "r",
+			"icon": "R",
+			"skillLevelId": 2,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 17,
+			"name": "Rust",
+			"slug": "rust",
+			"icon": "Rust",
+			"skillLevelId": 2,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 18,
+			"name": "SASS",
+			"slug": "sass",
+			"icon": "SASS",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 19,
+			"name": "SDL",
+			"slug": "sdl",
+			"icon": "SDL",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 20,
+			"name": "Tailwind",
+			"slug": "tailwind",
+			"icon": "Tailwind",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 21,
+			"name": "TensorFlow",
+			"slug": "tensorflow",
+			"icon": "Tensorflow",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 22,
+			"name": "Typescript",
+			"slug": "typescript",
+			"icon": "Typescript",
+			"skillLevelId": 0,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 23,
+			"name": "Unity",
+			"slug": "unity",
+			"icon": "Unity",
+			"skillLevelId": 0,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 24,
+			"name": "Unreal Engine 4 & 5",
+			"slug": "unreal-engine",
+			"icon": "UnrealEngine",
+			"skillLevelId": 0,
+			"workIds": [],
+			"projectIds": []
+		},{
+			"id": 25,
+			"name": "VueJS",
+			"slug": "vuejs",
+			"icon": "VueJS",
+			"skillLevelId": 1,
+			"workIds": [],
+			"projectIds": []
+		}
+	]
+}

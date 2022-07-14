@@ -2,7 +2,7 @@
 import Icon from "../icons/Icon.vue";
 import Card from "../../components/Card.vue";
 
-import cerebreonLogo from "@/assets/work/cerebreon-logo_RGB.png";
+const cerebreonLogo = "cerebreon-logo_RGB.png";
 
 defineProps<{
 	bgCol: string
@@ -17,7 +17,7 @@ function clicked(lang: string) {
 	<div class="w-full flex flex-wrap work-experience">
 		<Card class="m-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" @on-click="clicked('Cerebreon Technologies')">
 			<template v-slot:card-image>
-				<img class="with-background" :src="cerebreonLogo" alt="Company logo of Cerebreon Ltd."/>
+				<img class="with-background" :src="`/thumbs/workexp/${cerebreonLogo}`" alt="Company logo of Cerebreon Ltd."/>
 			</template>
 			<template v-slot:card-header>
 				<div class="flex justify-between">

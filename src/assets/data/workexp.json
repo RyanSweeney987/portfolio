@@ -1,12 +1,19 @@
-[
-	{
-		"name": "Cerebreon Technologies",
-		"img": "",
-		"start": "",
-		"finish": "",
-		"desc": "",
-		"worktitle": "",
-		"skills": []
-	}
-]
+{
+	"workexp": [
+		{
+			"id": "0",
+			"name": "Cerebreon Technologies",
+			"slug": "cerebreon-technologies",
+			"img": "",
+			"imgAlt": "",
+			"startDate": "2018",
+			"endDate": "2021",
+			"shortDesc": "Full-stack development",
+			"worktitle": "Developer",
+			"skillIds": []
+		}
+	]
+}
+
+
 

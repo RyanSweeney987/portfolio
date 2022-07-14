@@ -2,6 +2,12 @@
 import Icon from "../icons/Icon.vue";
 import Card from "../../components/Card.vue";
 
+import { useProjectStore } from "@/stores/ProjectStore";
+import { useSkillStore } from "@/stores/SkillStore";
+
+const projectStore = useProjectStore();
+const skillStore = useSkillStore();
+
 defineProps<{
 	bgCol: string
 }>()
@@ -15,25 +21,24 @@ function clicked(lang: string) {
 
 <template>
 	<div class="w-full flex flex-wrap projects">
-		<!-- <Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" v-for="(item, index) in data" @on-click="clicked('')">
+		<Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(project, index) in projectStore.projects" :bg-col="bgCol" @on-click="clicked(project.slug)">
 			<template v-slot:card-image>
-				<img class="" src="../../assets/projects/city_gen_thumb.png" alt="Thumbnail of City Generator project made in Unity."/>
+				<img :src="`/thumbs/projects/${project.imgSrc}`" :alt="project.imgAlt"/>
 			</template>
 			<template v-slot:card-header>
-				<h4>City Generator</h4>
+				<h4>{{project.name}}</h4>
 			</template>
 			<template v-slot:card-body>
-				<p>Procedural city generator made with the Unity game engine.</p>
+				<p>{{project.shortDesc}}</p>
 			</template>
 			<template v-slot:card-footer>
 				<div class="flex lang-icon-container w-full">
-					<Icon class="mx-1"><Unity/></Icon>
-					<Icon class="mx-1"><CSharp/></Icon>
+					<Icon class="mx-1" v-for="(skill, index) in skillStore.skills.filter(_ => project.skillIds.includes(_.id))" :icon-name="skill.icon"/>
 				</div>
 			</template>
-		</Card> -->
+		</Card>
 
-		<Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" @on-click="clicked('City Generator')">
+		<!-- <Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" :bg-col="bgCol" @on-click="clicked('City Generator')">
 			<template v-slot:card-image>
 				<img class="" src="../../assets/projects/city_gen_thumb.png" alt="Thumbnail of City Generator project made in Unity."/>
 			</template>
@@ -116,7 +121,7 @@ function clicked(lang: string) {
 					<Icon class="mx-1" icon-name="CPlusPlus"/>
 				</div>
 			</template>
-		</Card>
+		</Card> -->
 	</div>
 </template>
 
