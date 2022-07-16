@@ -15,14 +15,15 @@ defineProps<{
 	bgCol: string
 }>()
 
-function clicked(slug: string) {
+function clicked(slug: string, id: number) {
 	router.push(`/work/${slug}`);
+	router.push({name: "work", params: {slug: slug, id: id}});
 }
 </script>
 
 <template>
 	<div class="w-full flex flex-wrap work-experience">
-		<Card class="m-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(work, index) in workStore.workexp" :bg-col="bgCol" @on-click="clicked(work.slug)">
+		<Card class="m-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(work, index) in workStore.workexp" :bg-col="bgCol" @on-click="clicked(work.slug, work.id)">
 			<template v-slot:card-image>
 				<img class="with-background" :src="`/portfolio/thumbs/workexp/${work.imgSrc}`" :alt="work.imgAlt"/>
 			</template>

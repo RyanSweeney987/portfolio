@@ -1,19 +1,37 @@
 <script setup lang="ts">
+	import { useRoute } from 'vue-router';
 	import { useProjectStore } from '@/stores/ProjectStore';
+	import { useContentStore } from '@/stores/ContentStore';
+	import { computed } from '@vue/reactivity';
+	import Profile from '../components/Profile.vue';
+
+	const route = useRoute();
 	const projectStore = useProjectStore();
+	const contentStore = useContentStore();
 
-	function capitalizeFirstLetter(inStr: string) {
-		inStr = inStr.replaceAll("-", " ");
+	const project = projectStore.projects.find(_ => _.slug === route.params.slug);
 
-		let result = "";
-		inStr.split(" ").forEach(subStr => {
-			result += subStr.charAt(0).toUpperCase() + subStr.slice(1) + " ";
-		});
-		return result.trimEnd();
-	}
+	const projectName = computed(_ => {
+		return project !== undefined ? project.name : "error";
+	});
+	const projectId = computed(_ => {
+		return project !== undefined ? project.id : -1;
+	});
 </script>
 
 <template>
-	<h1 class="w-full text-center">This page will display further information about the project <span class="text-4xl font-bold italic">{{capitalizeFirstLetter($route.params.slug.toString())}}</span>.</h1>
+	<h1 class="w-full text-center">This page will display further information about the project <span class="text-4xl font-bold italic">{{ projectName }}</span>.</h1>
 	<h1 class="w-full text-center">This will include links to skills used in the project.</h1>
+	<h1>{{projectId}}</h1>
+	<Profile>
+		<template #profile-image>
+			<!-- Carousel -->
+		</template>
+		<template #profile-title>
+			<!-- Title -->
+		</template>
+		<template #profile-body>
+			<!-- Body content -->
+		</template>
+	</Profile>
 </template>

@@ -15,14 +15,14 @@ defineProps<{
 	bgCol: string
 }>()
 
-function clicked(slug: string) {
-	router.push(`/project/${slug}`);
+function clicked(slug: string, id: number) {
+	router.push({name: "project", params: {slug: slug, id: id}});
 }
 </script>
 
 <template>
 	<div class="w-full flex flex-wrap projects">
-		<Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(project, index) in projectStore.projects" :bg-col="bgCol" @on-click="clicked(project.slug)">
+		<Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(project, index) in projectStore.projects" :bg-col="bgCol" @on-click="clicked(project.slug, project.id)">
 			<template v-slot:card-image>
 				<img :src="`/portfolio/thumbs/projects/${project.imgSrc}`" :alt="project.imgAlt"/>
 			</template>

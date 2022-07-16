@@ -1,9 +1,11 @@
 {
-	"workexpContent": [
+	"workExpContent": [
 		{
-			"id":0,
+			"id": 0,
 			"workExpId": 0,
-			"content": ""
+			"contentDir": "/images/workexp/cerebreon",
+			"imgSrc": ["cerebreon-logo_RGB.png"],
+			"content": "# Cerebreon Technologies\nWork at **[Cerebreon Technologies](https://www.cerebreon.com/)** consisted of full-stack development using a Microsoft tech stack. Cerebreon Technologies is an inovative Republic of Ireland based FinTech startup with the aim vastly improving on the existing technology used within debt industry by intelligently applying software and artificial intelligence solutions to current problems plaguing the industry.\n## Responsibilities\nThese included designing and implementing front-end functionality based on user requirements. Requirements such as being able to adjust suggested parameters and then save these on a per case basis whilst providing proper feedback for the user. This required creating the corresponding controllers, models, database tables, and back-end business logic.\n## Tech Stack\nAngular was used as the front-end framework using Typescript and SASS for programming and styling respectively as opposed to Razor. C# and the .Net Core framework were used for the back-end using the MVC pattern. SQL was then used for the database."
 		}
 	]
 }

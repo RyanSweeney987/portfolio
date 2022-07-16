@@ -2,14 +2,23 @@
 	"projects": [
 		{
 			"id": 0,
+			"name": "Thesis: Autonomous Robot Navigation Using an LTC Network with Pepper Robot",
+			"slug": "thesis-autonomous-robot-navigation",
+			"imgSrc": "thesis_result_thumb.png",
+			"imgAlt": "Thumbnail of the result for the thesis.",
+			"shortDesc": "Thesis that focused on AI and robot navigation.",
+			"skillIds": [13, 15, 21]
+		},
+		{
+			"id": 1,
 			"name": "City Generator",
 			"slug": "city-generator",
 			"imgSrc": "city_gen_thumb.png",
 			"imgAlt": "Thumbnail of City Generator project made in Unity.",
 			"shortDesc": "Procedural city generator made with the Unity game engine.",
-			"skillIds": [3, 23]
+			"skillIds": [3, 1, 23]
 		},{
-			"id": 1,
+			"id": 2,
 			"name": "Underwater Cave",
 			"slug": "underwater-cave",
 			"imgSrc": "underwater_thumb.png",
@@ -17,7 +26,7 @@
 			"shortDesc": "Underwater cave scene made with the Unreal Engine 4.",
 			"skillIds": [2, 24]
 		},{
-			"id": 2,
+			"id": 3,
 			"name": "Asteroid Miner",
 			"slug": "asteroid-miner",
 			"imgSrc": "asteroid_miner_thumb.png",
@@ -25,7 +34,7 @@
 			"shortDesc": "Small game made in Unity as part of my concept developement module.",
 			"skillIds": [3, 23]
 		},{
-			"id": 3,
+			"id": 4,
 			"name": "Asteroids Clone",
 			"slug": "asteroids-clone",
 			"imgSrc": "asteroids_clone_thumb.png",
@@ -33,7 +42,7 @@
 			"shortDesc": "Small game made in C++ using SDL as part of my game programming module.",
 			"skillIds": [2, 19]
 		},{
-			"id": 4,
+			"id": 5,
 			"name": "Bulls and Cows",
 			"slug": "bulls-and-cows",
 			"imgSrc": "bulls_and_cows_thumb.png",

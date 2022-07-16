@@ -1,21 +1,20 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
-import SkillGroup from "../skills/SkillGroup.vue";
-import IconButton from "../icons/IconButton.vue";
+	import SkillGroup from "../skills/SkillGroup.vue";
+	import IconButton from "../icons/IconButton.vue";
 
-import { useSkillStore } from "@/stores/SkillStore";
+	import { useRouter } from 'vue-router'
+	import { useSkillStore } from "@/stores/SkillStore";
 
-const skillStore = useSkillStore();
+	const router = useRouter();
+	const skillStore = useSkillStore();
 
-const router = useRouter();
+	defineProps<{
+		bgCol: string
+	}>()
 
-defineProps<{
-	bgCol: string
-}>()
-
-function clicked(slug: string) {
-	router.push(`/skill/${slug}`);
-}
+	function clicked(slug: string) {
+		router.push({name: "skill", params: {slug}});
+	}
 </script>
 
 <template>

@@ -15,16 +15,19 @@ defineProps<{
 </script>
 
 <template>
-	<Profile img-caption="TODO: Take a new picture">
-		<template v-slot:profile-image>
-			<div class="flex justify-center w-full md:w-auto">
-				<img class="w-auto h-auto bio-image aspect-square" src="../../assets/profile.jpg" alt="Profile picture of Ryan Sweeney"/>
-			</div>
+	<Profile>
+		<template #profile-image>
+			<figure class="w-full md:w-auto flex flex-wrap justify-center">
+				<div class="flex justify-center w-full md:w-auto">
+					<img class="w-auto h-auto bio-image aspect-square" src="../../assets/profile.jpg" alt="Profile picture of Ryan Sweeney"/>
+				</div>
+				<figcaption class="w-full md:w-auto italic text-sm text-center">TODO: Take a new picture</figcaption>
+			</figure>
 		</template>
-		<template v-slot:profile-title>
+		<template #profile-title>
 			<h1 class="text-3xl text-white text-center md:text-left">Ryan Sweeney</h1>
 		</template>
-		<template v-slot:profile-body>
+		<template #profile-body>
 			<p class="mb-2">Hi! I'm a recent graduate from the <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/">University of Lincoln</a> with an expected 1st in <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/course/cgpcmpub/">Games Computing</a>.</p>
 			<p class="mb-2">Love playing video games and I enjoy working on game related projects in my spare time too. FinTech is the desired career path and have commercial experience in the personal debt industry. My biggest interested is in AI and it's potential applications. Other interests include 3D rendering, robotics, and aerospace.</p>
 			<div class="md:flex items-center">

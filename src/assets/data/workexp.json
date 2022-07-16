@@ -1,7 +1,7 @@
 {
 	"workexp": [
 		{
-			"id": "0",
+			"id": 0,
 			"name": "Cerebreon Technologies",
 			"slug": "cerebreon-technologies",
 			"imgSrc": "cerebreon-logo_RGB.png",

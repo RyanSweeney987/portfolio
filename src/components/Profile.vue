@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
+	imgSrc?: string,
+	imgAlt?: string,
 	imgCaption?: string
 }>()
 
@@ -9,10 +11,7 @@ const props = defineProps<{
 	<div class="md:flex ">
 		<!-- Profile picture -->
 		<div class="profile-image">
-			<figure class="w-full md:w-auto flex flex-wrap justify-center">
-				<slot name="profile-image"></slot>
-				<figcaption v-if="(typeof imgCaption) !== undefined" class="w-full md:w-auto italic text-sm text-center">{{imgCaption}}</figcaption>
-			</figure>
+			<slot name="profile-image"></slot>
 		</div>
 		<!-- Bio text -->
 		<div class="px-4 pt-2">
