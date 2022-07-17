@@ -4,6 +4,7 @@
 	import { useContentStore } from '@/stores/ContentStore';
 	import { computed } from '@vue/reactivity';
 	import Profile from '../components/Profile.vue';
+	import MarkdownRenderer from '../components/MarkdownRenderer.vue';
 	
 	const route = useRoute()
 	const workStore = useWorkStore();
@@ -17,21 +18,21 @@
 	const workId = computed(_ => {
 		return work !== undefined ? work.id : -1;
 	});
+	const workMarkdown = computed(_ => {
+		return contentStore.workExpContent.find(_ => _.workExpId === workId.value)?.content;
+	});
 </script>
 
 <template>
-	<h1 class="w-full text-center">This page will display further information about the work at <span class="text-4xl font-bold italic">{{ workName }}</span>.</h1>
-	<h1 class="w-full text-center">This will include links to skills used in the work.</h1>
-	<h1>{{workId}}</h1>
 	<Profile>
 		<template #profile-image>
 			<!-- Carousel -->
 		</template>
 		<template #profile-title>
-			<!-- Title -->
+			<h1>{{workName}}</h1>
 		</template>
 		<template #profile-body>
-			<!-- Body content -->
+			<MarkdownRenderer v-if="workMarkdown !== undefined" :markdown="workMarkdown"></MarkdownRenderer>
 		</template>
 	</Profile>
 </template>

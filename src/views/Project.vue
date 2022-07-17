@@ -4,6 +4,7 @@
 	import { useContentStore } from '@/stores/ContentStore';
 	import { computed } from '@vue/reactivity';
 	import Profile from '../components/Profile.vue';
+	import MarkdownRenderer from '../components/MarkdownRenderer.vue';
 
 	const route = useRoute();
 	const projectStore = useProjectStore();
@@ -32,6 +33,7 @@
 		</template>
 		<template #profile-body>
 			<!-- Body content -->
+			
 		</template>
 	</Profile>
 </template>
