@@ -8,7 +8,7 @@ const route = useRoute();
 <template>
 	<div class="flex justify-center w-full text-5xl my-10"><p>This site is still a WIP</p></div>
 	<div v-if="$route.name !== 'home'" class="w-full flex items-center justify-between mb-5">
-		<h1 class="capitalize text-4xl">{{$route.name}} Description</h1>
+		<h1 class="capitalize text-2xl">{{$route.name}} Description</h1>
 		<router-link :to="{name: 'home'}" class="rounded-sm back-link" :class="route.meta.bgHover"><icon :icon-name="'Close'"/></router-link>
 	</div>
 	<router-view></router-view>
@@ -17,13 +17,9 @@ const route = useRoute();
 <style>
 	@import "./assets/base.css";
 
-	/*max-width: 1024px;*/
 	#app {
 		margin: 0 auto;
 		padding: 0 2rem;
-		height: 100vh;
-		max-height: 100vh;
-		overflow: auto;
 		font-weight: normal;
 	}
 

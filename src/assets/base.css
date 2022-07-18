@@ -38,11 +38,6 @@
 }
 
 body {
-	min-height: 100vh;
-	max-height: 100vh;
-	min-width: 100vw;
-	max-width: 100vw;
-	overflow: auto;
 	color: var(--color-text);
 	background: rgb(30, 41, 59);
 	background-repeat: no-repeat;

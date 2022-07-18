@@ -68,7 +68,14 @@ const routes = [
 const router = createRouter({
 	history: createWebHistory("/portfolio"),
 	routes, // short for `routes: routes`
-	strict: true
+	strict: true,
+	scrollBehavior(to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition;
+		} else {
+			return { x: 0, y: 0, top: 0 };
+		}
+	}
 });
 
 // Global navigation guard

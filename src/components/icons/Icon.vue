@@ -1,4 +1,5 @@
 <script setup lang="ts">
+//@ts-nocheck
 // Programming
 import CSharp from "../icons/prog-langs/CSharp.vue";
 import CSS from "../icons/prog-langs/CSS.vue";
@@ -41,7 +42,6 @@ const props = defineProps<{
 }>();
 
 const _icon = ref(props.iconName);
-
 const icons = {
 	// Programming
 	CSharp,

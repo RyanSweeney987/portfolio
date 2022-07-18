@@ -7,7 +7,7 @@
 	import Profile from '@/components/Profile.vue';
 	import IconButton from '@/components/icons/IconButton.vue';
 	import MarkdownRenderer from '@/components/MarkdownRenderer.vue';
-import SkillGroup from '../components/skills/SkillGroup.vue';
+	import SkillGroup from '../components/skills/SkillGroup.vue';
 
 	const props = defineProps<{
 		slug: string
@@ -52,7 +52,7 @@ import SkillGroup from '../components/skills/SkillGroup.vue';
 			<h2>Skills</h2>
 			<div class="flex flex-wrap w-full">
 				<SkillGroup>
-					<IconButton class="m-1" v-for="(skill, index) in skillStore.skills.filter(_ => work?.skillIds.find(__ => __ === _.id) !== undefined)" :key="skill.id" :bg-col="route.meta.bgHover" :icon-name="skill.icon" @on-click="clicked(skill.slug)"/>
+					<IconButton class="m-1" v-for="(skill, index) in skillStore.skills.filter(_ => work?.skillIds.find(__ => __ === _.id) !== undefined)" :key="skill.id" :bg-col="(route.meta.bgHover as string)" :icon-name="skill.icon" @on-click="clicked(skill.slug)"/>
 				</SkillGroup>
 			</div>
 		</template>
