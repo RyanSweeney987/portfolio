@@ -28,8 +28,12 @@ defineProps<{
 			<h1 class="text-3xl text-white text-center md:text-left">Ryan Sweeney</h1>
 		</template>
 		<template #profile-body>
-			<p class="mb-2">Hi! I'm a recent graduate from the <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/">University of Lincoln</a> with an expected 1st in <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/course/cgpcmpub/">Games Computing</a>.</p>
-			<p class="mb-2">Love playing video games and I enjoy working on game related projects in my spare time too. FinTech is the desired career path and have commercial experience in the personal debt industry. My biggest interested is in AI and it's potential applications. Other interests include 3D rendering, robotics, and aerospace.</p>
+			<div class="bio-text">
+				<p>Hi! I'm a recent graduate from the <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/">University of Lincoln</a> with an expected 1st in <a class="link" :class="bgCol" href="https://www.lincoln.ac.uk/course/cgpcmpub/">Games Computing</a>.</p>
+				<p>Love playing video games and I enjoy working on game related projects in my spare time too. FinTech is the desired career path and have commercial experience in the personal debt industry. My biggest interested is in AI and it's potential applications. Other interests include 3D rendering, robotics, and aerospace.</p>
+				<p>This website represents both a portfolio and a CV. In the future, any software products that I have made will also be shared here.</p>
+				<p>I'm currently not looking for work but if you still want to get in touch, message me via LinkedIn.</p>
+			</div>
 			<div class="md:flex items-center">
 				<p>Based in Irvine, Scotland</p>
 				<div class="w-full h-px my-4 md:w-px md:h-4 md:mx-10 md:my-0 bg-gray-200"></div>
@@ -65,14 +69,12 @@ defineProps<{
 		color: white;
 	}
 
-	.profile-pic {
-		max-width: 10rem;
-	}
-</style>
-
-<style>
 	.bio-image {
 		min-width: 4rem;
 		min-height: 4rem;
 	}
+</style>
+
+<style>
+	
 </style>

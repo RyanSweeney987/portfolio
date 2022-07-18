@@ -3,22 +3,42 @@
 		{
 			"id": 0,
 			"projectId": 0,
+			"github": "",
+			"videoSrc": [],
+			"imgSrc": [],
+			"contentDir": "",
 			"content": ""
 		},{
 			"id": 1,
 			"projectId": 1,
+			"github": "",
+			"videoSrc": [],
+			"imgSrc": [],
+			"contentDir": "",
 			"content": ""
 		},{
 			"id": 2,
 			"projectId": 2,
+			"github": "",
+			"videoSrc": [],
+			"imgSrc": [],
+			"contentDir": "",
 			"content": ""
 		},{
 			"id": 3,
 			"projectId": 3,
+			"github": "",
+			"videoSrc": [],
+			"imgSrc": [],
+			"contentDir": "",
 			"content": ""
 		},{
 			"id": 4,
 			"projectId": 4,
+			"github": "",
+			"videoSrc": [],
+			"imgSrc": [],
+			"contentDir": "",
 			"content": ""
 		}
 	]

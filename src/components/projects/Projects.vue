@@ -15,33 +15,43 @@ defineProps<{
 	bgCol: string
 }>()
 
-function clicked(slug: string, id: number) {
-	router.push({name: "project", params: {slug: slug, id: id}});
+function clicked(slug: string) {
+	router.push({name: "project", params: {slug: slug}});
 }
 </script>
 
 <template>
 	<div class="w-full flex flex-wrap projects">
-		<Card class="sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(project, index) in projectStore.projects" :bg-col="bgCol" @on-click="clicked(project.slug, project.id)">
-			<template v-slot:card-image>
-				<img :src="`/portfolio/thumbs/projects/${project.imgSrc}`" :alt="project.imgAlt"/>
-			</template>
-			<template v-slot:card-header>
-				<h4>{{project.name}}</h4>
-			</template>
-			<template v-slot:card-body>
-				<p>{{project.shortDesc}}</p>
-			</template>
-			<template v-slot:card-footer>
-				<div class="flex lang-icon-container w-full">
-					<Icon class="mx-1" v-for="(skill, index) in skillStore.skills.filter(_ => project.skillIds.includes(_.id))" :icon-name="skill.icon"/>
-				</div>
-			</template>
-		</Card>
+		<div class="p-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(project, index) in projectStore.projects">
+			<Card :bg-col="bgCol" @on-click="clicked(project.slug)">
+				<template v-slot:card-image>
+					<img :src="`/portfolio/thumbs/projects/${project.imgSrc}`" :alt="project.imgAlt"/>
+				</template>
+				<template v-slot:card-header>
+					<h4 :title="project.name">{{project.name}}</h4>
+				</template>
+				<template v-slot:card-body>
+					<p>{{project.shortDesc}}</p>
+				</template>
+				<template v-slot:card-footer>
+					<div class="flex lang-icon-container w-full">
+						<Icon class="mx-1" v-for="(skill, index) in skillStore.skills.filter(_ => project.skillIds.includes(_.id))" :icon-name="skill.icon"/>
+					</div>
+				</template>
+			</Card>
+		</div>
 	</div>
 </template>
 
 <style scoped>
+	.card-header h4 {
+		width: 100%;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
 	.card-body p {
 		height: 3rem;
 		width: 100%;

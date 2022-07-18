@@ -4,10 +4,13 @@
 	import { computed } from '@vue/reactivity';
 	import Profile from '../components/Profile.vue';
 
-	const route = useRoute();
+	const props = defineProps<{
+		slug: string
+	}>();
+
 	const skillStore = useSkillStore();
 
-	const skill = skillStore.skills.find(_ => _.slug === route.params.slug);
+	const skill = skillStore.skills.find(_ => _.slug === props.slug);
 
 	const skillName = computed(_ => {
 		return skill !== undefined ? skill.name : "error";

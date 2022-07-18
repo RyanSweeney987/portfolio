@@ -6,14 +6,17 @@
 	import Profile from '../components/Profile.vue';
 	import MarkdownRenderer from '../components/MarkdownRenderer.vue';
 
-	const route = useRoute();
+	const props = defineProps<{
+		slug: string
+	}>();
+
 	const projectStore = useProjectStore();
 	const contentStore = useContentStore();
 
-	const project = projectStore.projects.find(_ => _.slug === route.params.slug);
+	const project = projectStore.projects.find(_ => _.slug === props.slug);
 
 	const projectName = computed(_ => {
-		return project !== undefined ? project.name : "error";
+		return project !== undefined ? project.name : "project not found";
 	});
 	const projectId = computed(_ => {
 		return project !== undefined ? project.id : -1;

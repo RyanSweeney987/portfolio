@@ -40,7 +40,15 @@ button:hover svg path {
 		@apply text-left text-base;
 	}
 
+	a.link {
+		@apply font-bold underline rounded-sm;
+	}
 
+	a.link:hover {
+		color: white;
+	}
+
+	/* Background gradients */
 	.background-1 {
 		@apply bg-gradient-to-br from-orange-400 to-pink-500;
 	}

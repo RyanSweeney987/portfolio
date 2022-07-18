@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import SkillGroup from "../skills/SkillGroup.vue";
+	import SkillGroup from "./SkillGroup.vue";
 	import IconButton from "../icons/IconButton.vue";
 
 	import { useRouter } from 'vue-router'

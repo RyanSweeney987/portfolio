@@ -15,7 +15,7 @@ import App from "./App.vue";
 
 import './index.css'
 
-const pinia = createPinia()
+const pinia = createPinia();
 
 const routeStores = [
 	{name: "skill", store: skills},
@@ -24,10 +24,45 @@ const routeStores = [
 ];
 
 const routes = [
-	{ path: '/', name: "home", component: Home, sensitive: true},
-	{ path: '/skill/:slug', name: "skill", component: Skill, sensitive: true, props: true},
-	{ path: '/work/:slug', name: "work", component: Work, sensitive: true, props: true},
-	{ path: '/project/:slug', name: "project", component: Project, sensitive: true},
+	{ 
+		path: '/', 
+		name: "home", 
+		component: Home, 
+		sensitive: true
+	},
+	{ 
+		path: '/skill/:slug', 
+		name: "skill", 
+		component: Skill, 
+		sensitive: true, 
+		props: true, 
+		meta: {
+			bg: "background-2",
+			bgHover: "background-hover-2"
+		}
+	},
+	{ 
+		path: '/work/:slug', 
+		name: "work", 
+		component: Work, 
+		sensitive: true, 
+		props: true, 
+		meta: {
+			bg: "background-3",
+			bgHover: "background-hover-3"
+		}
+	},
+	{ 
+		path: '/project/:slug', 
+		name: "project", 
+		component: Project, 
+		sensitive: true, 
+		props: true, 
+		meta: {
+			bg: "background-4",
+			bgHover: "background-hover-4"
+		}
+	},
 ];
 
 const router = createRouter({
