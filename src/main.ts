@@ -1,6 +1,6 @@
 import { createApp  } from "vue";
 import { createPinia } from "pinia";
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 import { skills } from "@/assets/data/skills.json";
 import { workexp } from "@/assets/data/workexp.json";
@@ -66,7 +66,7 @@ const routes = [
 ];
 
 const router = createRouter({
-	history: createWebHistory("/portfolio"),
+	history: createWebHashHistory("/portfolio"),
 	routes, // short for `routes: routes`
 	strict: true,
 	scrollBehavior(to, from, savedPosition) {
