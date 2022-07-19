@@ -59,6 +59,7 @@ const route = useRoute();
 	}
 
 	#app {
+		width: 100%;
 		margin: 0 auto;
 		font-weight: normal;
 	}
