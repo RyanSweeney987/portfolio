@@ -41,7 +41,7 @@ function clicked(slug: string) {
 				<p>{{work.shortDesc}}</p>
 			</template>
 			<template v-slot:card-footer>
-				<div class="flex lang-icon-container w-full">
+				<div class="flex lang-icon-container w-full overflow-x-scroll">
 					<Icon class="mx-1" v-for="(skill, index) in skillStore.skills.filter(_ => work.skillIds.includes(_.id))" :icon-name="skill.icon"/>
 				</div>
 			</template>

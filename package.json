@@ -10,6 +10,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@egjs/flicking-plugins": "^4.4.0",
+    "@egjs/vue3-flicking": "^4.9.1",
     "@headlessui/vue": "^1.6.5",
     "@types/markdown-it": "^12.2.3",
     "@types/markdown-it-attrs": "^4.1.0",

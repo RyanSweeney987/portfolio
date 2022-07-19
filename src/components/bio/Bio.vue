@@ -6,8 +6,6 @@ import LinkedIn from "../icons/social/LinkedIn.vue";
 import IconLink from "../icons/IconLink.vue";
 import Profile from "../Profile.vue";
 
-const profileImageSrc = "/portfolio/src/assets/profile.jpg";
-
 defineProps<{
 	bgCol: string
 }>()
@@ -15,11 +13,11 @@ defineProps<{
 </script>
 
 <template>
-	<Profile>
-		<template #profile-image>
-			<figure class="w-full md:w-auto flex flex-wrap justify-center">
+	<Profile class="bio-profile">
+		<template #profile-media>
+			<figure class="bio-image w-full md:w-auto flex flex-wrap justify-center">
 				<div class="flex justify-center w-full md:w-auto">
-					<img class="w-auto h-auto bio-image aspect-square" src="../../assets/profile.jpg" alt="Profile picture of Ryan Sweeney"/>
+					<img class="w-auto h-auto aspect-square" src="../../assets/profile.jpg" alt="Profile picture of Ryan Sweeney"/>
 				</div>
 				<figcaption class="w-full md:w-auto italic text-sm text-center">TODO: Take a new picture</figcaption>
 			</figure>
@@ -52,6 +50,15 @@ defineProps<{
 	@tailwind components;
 	
 	@layer components {
+		.bio-image {
+			@apply flex justify-center md:block w-full md:w-auto;
+		}
+
+		.bio-image img {
+			max-width: 15rem;
+			@apply w-full rounded-lg;
+		}
+
 		.bio-text {
 			@apply text-justify lg:text-left;
 		}
@@ -76,5 +83,19 @@ defineProps<{
 </style>
 
 <style>
+	@tailwind components;
 	
+	@layer components {
+		/*.bio-profile .profile-media {
+			@apply flex-shrink-0;
+		}
+
+		.bio-profile .profile-content {
+			@apply flex-shrink-0;
+		}*/
+
+		.bio-profile.profile {
+			@apply md:flex;
+		}
+	}
 </style>

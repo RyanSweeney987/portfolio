@@ -1,20 +1,11 @@
-<script setup lang="ts">
-const props = defineProps<{
-	imgSrc?: string,
-	imgAlt?: string,
-	imgCaption?: string
-}>()
-
-</script>
-
 <template>
-	<div class="md:flex ">
+	<div class="profile">
 		<!-- Profile picture -->
-		<div class="profile-image">
-			<slot name="profile-image"></slot>
+		<div class="profile-media">
+			<slot name="profile-media"></slot>
 		</div>
 		<!-- Bio text -->
-		<div class="px-4 pt-2">
+		<div class="profile-content">
 			<div class="pb-4">
 				<slot name="profile-title"></slot>
 			</div>
@@ -29,37 +20,13 @@ const props = defineProps<{
 	@tailwind components;
 	
 	@layer components {
-		.profile-image {
-			@apply flex justify-center md:block w-full md:w-auto;
+		.profile-media {
+			flex-basis: 15rem;
 		}
 
-		.profile-image img {
-			max-width: 10rem;
-			width: 100%;
-			@apply rounded-lg shadow-sm;
-		}
-
-		.profile-text {
-			@apply text-justify lg:text-left;
-		}
-
-		.profile-text p {
-			@apply mb-2;
-		}
-	}
-</style>
-
-<style>
-	@tailwind components;
-	
-	@layer components {
-		.profile-image img {
-			max-width: 10rem;
-			@apply rounded-lg shadow-sm;
-		}
-
-		.profile-text p {
-			@apply mb-2;
+		.profile-content {
+			flex-basis: auto;
+			@apply px-4 pt-2 w-full;
 		}
 	}
 </style>

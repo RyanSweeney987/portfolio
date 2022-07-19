@@ -48,6 +48,25 @@ button:hover svg path {
 		color: white;
 	}
 
+	.flicking-viewport {
+		@apply w-full;
+	}
+
+	.card {
+		box-shadow: 0 .5em 1em -.125em hsla(0,0%,4%,.1),0 0 0 1px hsla(0,0%,4%,.02);
+	}
+
+	.card-panel {
+		align-items: flex-start;
+		border: 2px solid rgba(0,0,0,.1);
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.panel {
+		@apply w-full aspect-video;
+	}
+
 	/* Background gradients */
 	.background-1 {
 		@apply bg-gradient-to-br from-orange-400 to-pink-500;
