@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url("../node_modules/@egjs/vue3-flicking/dist/flicking.css");
+@import url("../node_modules/@egjs/vue3-flicking/dist/flicking-inline.css");
+@import url("../node_modules/@egjs/flicking-plugins/dist/pagination.css");
+@import url("../node_modules/flicking-plugins/dist/arrow.css"); */
+
 svg path {
 	fill: var(--color-text);
 }
@@ -48,7 +53,25 @@ button:hover svg path {
 		color: white;
 	}
 
-	.flicking-pagination-bullet-active {
+	.card-panel {
+		@apply rounded-xl shadow-md;
+	}
+
+	/* .flicking-panel {
+		align-items: flex-end;
+		border-radius: 5px;
+		box-sizing: border-box;
+		display: flex;
+		height: 200px;
+		justify-content: start;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		padding: 30px 20px;
+		position: relative;
+		width: 50%;
+	} */
+
+	/*.flicking-pagination-bullet-active {
 		background-color: #f2a65e;
 	}
 
@@ -78,7 +101,7 @@ button:hover svg path {
 		text-align: center;
 		width: 100%;
 		z-index: 2;
-	}
+	}*/
 
 	/* Background gradients */
 	.background-1 {

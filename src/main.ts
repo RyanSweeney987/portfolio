@@ -2,18 +2,28 @@ import { createApp  } from "vue";
 import { createPinia } from "pinia";
 import { createRouter, createWebHashHistory } from "vue-router";
 
+// Data
 import { skills } from "@/assets/data/skills.json";
 import { workexp } from "@/assets/data/workexp.json";
 import { projects } from "@/assets/data/projects.json";
 
+// 3rd party components
+import Flicking from "@egjs/vue3-flicking";
+
+// Views
 import Home from "@/views/Home.vue";
 import Skill from "@/views/Skill.vue";
 import Work from "@/views/Work.vue";
 import Project from "@/views/Project.vue";
-
 import App from "./App.vue";
 
+// CSS
 import './index.css'
+import "@egjs/vue3-flicking/dist/flicking.css";
+import "@egjs/vue3-flicking/dist/flicking-inline.css";
+import "@egjs/flicking-plugins/dist/pagination.css";
+import "@egjs/flicking-plugins/dist/arrow.css";
+
 
 const pinia = createPinia();
 
@@ -96,4 +106,6 @@ router.beforeEach((to, from) => {
 const app = createApp(App);
 app.use(pinia)
 app.use(router);
-app.mount("#app");
+app.mount("#app"); 
+
+app.component("Flicking", Flicking);

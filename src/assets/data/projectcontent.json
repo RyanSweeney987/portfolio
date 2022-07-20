@@ -3,43 +3,103 @@
 		{
 			"id": 0,
 			"projectId": 0,
-			"github": "",
-			"videoSrc": [],
-			"imgSrc": [],
-			"contentDir": "",
-			"content": ""
+			"media": [
+				{
+					"typeId": 0,
+					"source": "thesis_result_thumb.png",
+					"alt": "Thumbnail image for thesis result"
+				}, {
+					"typeId": 1,
+					"source": "MB76rxbj1ZE",
+					"alt": "Desertation Project Result"
+				}, {
+					"typeId": 2,
+					"source": "https://github.com/RyanSweeney987",
+					"alt": ""
+				}
+			],
+			"contentDir": "/images/projects/thesis/",
+			"content": "# Thesis Content"
 		},{
 			"id": 1,
 			"projectId": 1,
-			"github": "",
-			"videoSrc": [],
-			"imgSrc": [],
-			"contentDir": "",
-			"content": ""
+			"media": [
+				{
+					"typeId": 0,
+					"source": "thesis_result_thumb.png",
+					"alt": ""
+				}, {
+					"typeId": 1,
+					"source": "https://www.youtube.com/shorts/MB76rxbj1ZE",
+					"alt": ""
+				}, {
+					"typeId": 2,
+					"source": "https://github.com/RyanSweeney987",
+					"alt": ""
+				}
+			],
+			"contentDir": "/images/projects/thesis/",
+			"content": "# Thesis Content"
 		},{
 			"id": 2,
 			"projectId": 2,
-			"github": "",
-			"videoSrc": [],
-			"imgSrc": [],
-			"contentDir": "",
-			"content": ""
+			"media": [
+				{
+					"typeId": 0,
+					"source": "thesis_result_thumb.png",
+					"alt": ""
+				}, {
+					"typeId": 1,
+					"source": "https://www.youtube.com/shorts/MB76rxbj1ZE",
+					"alt": ""
+				}, {
+					"typeId": 2,
+					"source": "https://github.com/RyanSweeney987",
+					"alt": ""
+				}
+			],
+			"contentDir": "/images/projects/thesis/",
+			"content": "# Thesis Content"
 		},{
 			"id": 3,
 			"projectId": 3,
-			"github": "",
-			"videoSrc": [],
-			"imgSrc": [],
-			"contentDir": "",
-			"content": ""
+			"media": [
+				{
+					"typeId": 0,
+					"source": "thesis_result_thumb.png",
+					"alt": ""
+				}, {
+					"typeId": 1,
+					"source": "https://www.youtube.com/shorts/MB76rxbj1ZE",
+					"alt": ""
+				}, {
+					"typeId": 2,
+					"source": "https://github.com/RyanSweeney987",
+					"alt": ""
+				}
+			],
+			"contentDir": "/images/projects/thesis/",
+			"content": "# Thesis Content"
 		},{
 			"id": 4,
 			"projectId": 4,
-			"github": "",
-			"videoSrc": [],
-			"imgSrc": [],
-			"contentDir": "",
-			"content": ""
+			"media": [
+				{
+					"typeId": 0,
+					"source": "thesis_result_thumb.png",
+					"alt": ""
+				}, {
+					"typeId": 1,
+					"source": "https://www.youtube.com/shorts/MB76rxbj1ZE",
+					"alt": ""
+				}, {
+					"typeId": 2,
+					"source": "https://github.com/RyanSweeney987",
+					"alt": ""
+				}
+			],
+			"contentDir": "/images/projects/thesis/",
+			"content": "# Thesis Content"
 		}
 	]
 }

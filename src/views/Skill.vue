@@ -26,7 +26,7 @@
 
 	<h1>{{skillId}}</h1>
 	<Profile>
-		<template #profile-image>
+		<template #profile-media>
 			<!-- Carousel -->
 		</template>
 		<template #profile-title>

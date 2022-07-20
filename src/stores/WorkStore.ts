@@ -7,4 +7,4 @@ export const useWorkStore = defineStore('workStore', {
 	state: () => {
 		return { workexp };
 	}
-})
+});

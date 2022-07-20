@@ -1,0 +1,14 @@
+{
+	"mediaTypes": [
+		{
+			"id": 0,
+			"typeName": "image"
+		}, {
+			"id": 1,
+			"typeName": "youtube"
+		}, {
+			"id": 2,
+			"typeName": "github"
+		}
+	]
+}
