@@ -45,10 +45,10 @@
 </script>
 
 <template>
-	<Profile class="work-container">
-		<template #profile-image>
+	<Profile class="work-profile">
+		<template #profile-media>
 			<!-- Carousel -->
-			<div class="w-full">
+			<div class="w-full md:w-2/3">
 				<Flicking :options="{ circular: true }" :plugins="plugins">
 					<div class="card-panel" v-for="(media, index) in content?.imgSrc" :key="index">
 						<img :src="`/portfolio/${content?.contentDir}/${media}`"/>
@@ -77,4 +77,11 @@
 </template>
 
 <style>
+	@tailwind components;
+	
+	@layer components {
+		.work-profile .profile-media {
+			@apply flex justify-center;
+		}
+	}
 </style>

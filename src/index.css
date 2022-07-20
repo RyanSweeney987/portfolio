@@ -48,23 +48,36 @@ button:hover svg path {
 		color: white;
 	}
 
-	.flicking-viewport {
-		@apply w-full;
+	.flicking-pagination-bullet-active {
+		background-color: #f2a65e;
 	}
 
-	.card {
-		box-shadow: 0 .5em 1em -.125em hsla(0,0%,4%,.1),0 0 0 1px hsla(0,0%,4%,.02);
+	.profile-media .flicking-viewport {
+		@apply pb-6 w-full;
 	}
 
 	.card-panel {
 		align-items: flex-start;
-		border: 2px solid rgba(0,0,0,.1);
 		display: flex;
 		justify-content: flex-end;
+		@apply rounded-xl shadow-md;
+	}
+
+	.card-panel img {
+		@apply rounded-xl;
 	}
 
 	.panel {
 		@apply w-full aspect-video;
+	}
+
+	.flicking-pagination {
+		bottom: 10px;
+		left: 0;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		z-index: 2;
 	}
 
 	/* Background gradients */
@@ -99,4 +112,20 @@ button:hover svg path {
 	.background-hover-4:hover {
 		@apply bg-gradient-to-t from-fuchsia-500 to-purple-600;
 	}	
+
+	.background-pattern-1 {
+		background-image: var(--bg-pattern-1);
+	}
+
+	.background-pattern-2 {
+		background-image: var(--bg-pattern-2);
+	}
+
+	.background-pattern-3 {
+		background-image: var(--bg-pattern-3);
+	}
+
+	.background-pattern-4 {
+		background-image: var(--bg-pattern-4);
+	}
 }

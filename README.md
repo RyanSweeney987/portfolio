@@ -1,5 +1,9 @@
 # portfolio
 
+Portfolio © 2022 by Ryan Sweeney is licensed under CC BY-NC-SA 4.0 
+This project and all files associated with the original repository are shared under the CC BY-NC-SA 4.0 license.
+(https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup

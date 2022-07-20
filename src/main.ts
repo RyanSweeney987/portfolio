@@ -38,6 +38,7 @@ const routes = [
 		props: true, 
 		meta: {
 			bg: "background-2",
+			bgPattern: "background-pattern-2",
 			bgHover: "background-hover-2"
 		}
 	},
@@ -49,6 +50,7 @@ const routes = [
 		props: true, 
 		meta: {
 			bg: "background-3",
+			bgPattern: "background-pattern-3",
 			bgHover: "background-hover-3"
 		}
 	},
@@ -60,6 +62,7 @@ const routes = [
 		props: true, 
 		meta: {
 			bg: "background-4",
+			bgPattern: "background-pattern-4",
 			bgHover: "background-hover-4"
 		}
 	},
