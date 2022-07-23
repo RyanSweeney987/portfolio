@@ -1,15 +1,4 @@
-{	"skillLevels": [
-		{
-			"id": 0,
-			"name": "Proficient"
-		},{
-			"id": 1,
-			"name": "Used"
-		},{
-			"id": 2,
-			"name": "Dabbled"
-		}
-	],
+{	
 	"skills": [
 		{
 			"id": 0,

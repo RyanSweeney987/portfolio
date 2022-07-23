@@ -2,20 +2,21 @@
 	"extends": "@vue/tsconfig/tsconfig.web.json",
 	"include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
 	"compilerOptions": {
-	"baseUrl": ".",
-	"paths": {
-		"@/*": ["./src/*", "./*"]
-	},
-	"types": [
-		"node"
-	],
-	"lib": [
-		"ES2021.String"
-		]
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*", "./*"]
+		},
+		"types": [
+			"node"
+		],
+		"lib": [
+			"ES2021.String"
+		],
+		"isolatedModules": false
 	},
 	"references": [
-	{
-		"path": "./tsconfig.config.json"
-	}
+		{
+			"path": "./tsconfig.config.json"
+		}
 	]
 }

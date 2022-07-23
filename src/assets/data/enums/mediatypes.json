@@ -1,0 +1,13 @@
+{	
+	"properties": {
+		"MediaType": {
+			"type": "integer",
+			"enum": [0, 1, 2],
+			"tsEnumNames": ["Image", "YouTube", "GitHub"]
+		}
+	}, 
+	"required": [
+		"MediaType "
+	],
+	"additionalProperties": false
+}

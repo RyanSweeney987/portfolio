@@ -4,11 +4,20 @@
 	import { useSkillStore } from '@/stores/SkillStore';
 	import { useContentStore } from '@/stores/ContentStore';
 	import { computed } from '@vue/reactivity';
-	import { Pagination, Arrow } from "@egjs/flicking-plugins";
 	import Profile from '@/components/Profile.vue';
 	import IconButton from '@/components/icons/IconButton.vue';
 	import MarkdownRenderer from '@/components/MarkdownRenderer.vue';
 	import SkillGroup from '../components/skills/SkillGroup.vue';
+
+  	import { Swiper, SwiperSlide } from 'swiper/vue';
+	import { Navigation, Pagination, Scrollbar, A11y, Virtual  } from 'swiper';
+	import 'swiper/css';
+	import 'swiper/css/navigation';
+  	import 'swiper/css/pagination';
+
+	import { MediaType } from '@/enums/MediaTypeEnum';
+
+	const modules = [Navigation, Pagination, Scrollbar, A11y, Virtual];
 
 	const router = useRouter();
 	const route = useRoute();
@@ -20,16 +29,24 @@
 	const projectStore = useProjectStore();
 	const skillStore = useSkillStore();
 	const contentStore = useContentStore();
-	const types = contentStore.mediaTypes;
-
-	const plugins = [new Pagination({ type: 'bullet' }), new Arrow()];
 
 	const project = projectStore.projects.find(_ => _.slug === props.slug);
 	const content = contentStore.projectContent.find(_ => _.projectId === project?.id);
 
-	const imgContent = content?.media.filter(_ => _.typeId === types.find(__ => __.typeName === "image")?.id);
-	const youtubeContent = content?.media.filter(_ => _.typeId === types.find(__ => __.typeName === "youtube")?.id);
-	const gitHubLink = content?.media.find(_ => _.typeId === types.find(__ => __.typeName === "github")?.id);
+	const imgContent = content?.media.filter(_ => _.typeId === MediaType.Image);
+	const youtubeContent = content?.media.filter(_ => _.typeId === MediaType.YouTube);
+	const gitHubLink = content?.media.find(_ => _.typeId === MediaType.GitHub);
+
+	imgContent?.forEach(element => {
+		console.log(element);
+	});
+	youtubeContent?.forEach(element => {
+		console.log(element);
+	});
+	console.log(imgContent?.flat());
+	console.log(youtubeContent?.flat());
+	console.log(gitHubLink);
+
 
 	const projectName = computed(_ => {
 		return project !== undefined ? project.name : "project not found";
@@ -49,29 +66,13 @@
 <template>
 	<Profile class="project-profile">
 		<template #profile-media>
-			<div class="w-full md:w-2/3">
-				<Flicking :options="{ circular: true }" :plugins="plugins">
-					<div class="card-panel flicking-panel">
-						<div class="test text-center border-2">This is a test</div>
-					</div>
-					<div class="card-panel test text-center border-2">This is a test</div>
-					<div class="card-panel test text-center border-2">This is a test</div>
-					<div class="card-panel test text-center border-2">This is a test</div>
-					<div class="card-panel test text-center border-2">This is a test</div>
-					<!-- <template #default>		
-						<div class="card-panel flicking-panel" v-for="(media, index) in imgContent" :key="index">
-							<img :src="`/portfolio/${content?.contentDir}/${media.source}`" :alt="media.alt"/>
-						</div>
-						<div class="card-panel flicking-panel" v-for="(media, index) in youtubeContent" :key="index">
-							<iframe width="100%" height="auto" :src="`https://www.youtube.com/embed/${media.source}`" :title="media.alt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
-					</template> -->
-					<template #viewport>
-						<span class="flicking-arrow-prev is-thin"></span>
-						<span class="flicking-arrow-next is-thin"></span>
-						<div class="flicking-pagination"></div>
-					</template>
-				</Flicking>
+			<div class="w-full">
+				<Swiper :modules="modules" :slides-per-view="1" :space-between="20" navigation :pagination="{ clickable: true }">
+					<SwiperSlide v-for="(media, index) in content?.media.filter(_ => _.typeId === MediaType.Image || _.typeId === MediaType.YouTube)">
+						<di>{{index}}</di>
+						<!-- <div v-if="media.typeId === MediaType.Image">{{index}}</div> -->
+					</SwiperSlide>
+				</Swiper>
 			</div>
 		</template>
 		<template #profile-title>
@@ -93,14 +94,6 @@
 	@tailwind components;
 	
 	@layer components {
-		.project-profile .profile-media {
-			@apply flex justify-center;
-		}
-	}
 
-	.test {
-		width: 10rem;
-		height: 10rem;
-		background-color: darkslategrey;
 	}
 </style>

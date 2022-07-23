@@ -5,8 +5,19 @@
 	import { useRouter } from 'vue-router'
 	import { useSkillStore } from "@/stores/SkillStore";
 
+	import { SkillLevelEnum } from "@/enums/SkillLevelEnum";
+
 	const router = useRouter();
 	const skillStore = useSkillStore();
+
+	const skillLevels = Object.keys(SkillLevelEnum)
+	.filter((v) => isNaN(Number(v)))
+	.map((name) => {
+		return {
+			id: SkillLevelEnum[name as keyof typeof SkillLevelEnum],
+			name,
+		};
+	});
 
 	defineProps<{
 		bgCol: string
@@ -19,7 +30,7 @@
 
 <template>
 	<div class="w-full md:flex md:flex-wrap">
-		<div class="skill-group-container" v-for="(level, index) in skillStore.skillLevels">
+		<div class="skill-group-container" v-for="(level, index) in skillLevels">
 			<SkillGroup :title="level.name">
 				<IconButton class="m-1" v-for="(skill, index) in skillStore.skills.filter(_ => _.skillLevelId === level.id)" :key="skill.id" :bg-col="bgCol" :icon-name="skill.icon" @on-click="clicked(skill.slug)"/>
 			</SkillGroup>

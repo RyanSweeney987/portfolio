@@ -1,0 +1,1 @@
+tsc.cmd ./GenerateEnums.ts | node ./GenerateEnums.js

@@ -4,12 +4,12 @@
 	import { useSkillStore } from "@/stores/SkillStore";
 	import { useContentStore } from '@/stores/ContentStore';
 	import { computed } from '@vue/reactivity';
-	import { Pagination, Arrow } from "@egjs/flicking-plugins";
 	import Profile from '@/components/Profile.vue';
 	import IconButton from '@/components/icons/IconButton.vue';
 	import MarkdownRenderer from '@/components/MarkdownRenderer.vue';
 	import SkillGroup from '../components/skills/SkillGroup.vue';
 
+	import { MediaType } from '@/enums/MediaTypeEnum';
 
 	const props = defineProps<{
 		slug: string
@@ -22,13 +22,10 @@
 	const skillStore = useSkillStore();
 	const contentStore = useContentStore();
 
-	const plugins = [new Pagination({ type: 'bullet' }), new Arrow()];
-
 	const work = workStore.workexp.find(_ => _.slug === props.slug);
 	const content = contentStore.workExpContent.find(_ => _.workExpId === work?.id);
-	const types = contentStore.mediaTypes;
 
-	const imgContent = content?.media.filter(_ => _.typeId === types.find(__ => __.typeName === "image")?.id);
+	const imgContent = content?.media.filter(_ => _.typeId === MediaType.Image);
 
 	const workName = computed(_ => {
 		return work !== undefined ? work.name : "error";
@@ -48,15 +45,7 @@
 <template>
 	<Profile class="work-profile">
 		<template #profile-media>
-			<div class="w-full md:w-2/3">
-				<Flicking :options="{ circular: true }" :plugins="plugins">
-					<div class="card-panel" v-for="(media, index) in imgContent" :key="index">
-						<img :src="`/portfolio/${content?.contentDir}/${media.source}`" :alt="media.alt"/>
-					</div>
-					<template #viewport>
-						<div class="flicking-pagination"></div>
-					</template>
-				</Flicking>
+			<div class="w-full">
 			</div>
 		</template>
 		<template #profile-title>
@@ -80,8 +69,8 @@
 	@tailwind components;
 	
 	@layer components {
-		.work-profile .profile-media {
+		/* .work-profile .profile-media {
 			@apply flex justify-center;
-		}
+		} */
 	}
 </style>

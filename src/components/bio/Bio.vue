@@ -86,14 +86,6 @@ defineProps<{
 	@tailwind components;
 	
 	@layer components {
-		/*.bio-profile .profile-media {
-			@apply flex-shrink-0;
-		}
-
-		.bio-profile .profile-content {
-			@apply flex-shrink-0;
-		}*/
-
 		.bio-profile.profile {
 			@apply md:flex;
 		}
