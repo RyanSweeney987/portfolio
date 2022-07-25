@@ -2,7 +2,6 @@
 import Icon from "./Icon.vue";
 
 defineProps<{
-	bgCol: string,
 	iconName: string
 }>()
 
@@ -14,7 +13,7 @@ function _onClick() {
 </script>
 
 <template>
-	<button class="link-button" :class="bgCol" v-on:click="_onClick" type="button">
+	<button class="link-button" v-on:click="_onClick" type="button">
 		<Icon :icon-name="iconName"/>
 	</button>
 </template>
@@ -29,10 +28,6 @@ function _onClick() {
 			padding: 0.25rem;
 			@apply font-bold underline rounded-sm;
 		}
-	}
-
-	a:hover svg path {
-		fill: white;
 	}
 </style>
 

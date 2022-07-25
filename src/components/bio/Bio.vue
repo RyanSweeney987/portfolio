@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import YouTube from "../icons/social/YouTube.vue";
-import GitHub from "../icons/social/GitHub.vue";
-import Instagram from "../icons/social/Instagram.vue";
-import LinkedIn from "../icons/social/LinkedIn.vue";
 import IconLink from "../icons/IconLink.vue";
 import Profile from "../Profile.vue";
 
@@ -36,10 +32,10 @@ defineProps<{
 				<p>Based in Irvine, Scotland</p>
 				<div class="w-full h-px my-4 md:w-px md:h-4 md:mx-10 md:my-0 bg-gray-200"></div>
 				<div class="flex flex-wrap w-full justify-center md:justify-start">
-					<IconLink class="mx-1" :bg-col="bgCol" link="https://www.linkedin.com/in/ryanairth-sweeney/"><LinkedIn/></IconLink>
-					<IconLink class="mx-1" :bg-col="bgCol" link="https://github.com/RyanSweeney987" ><GitHub/></IconLink>
-					<IconLink class="mx-1" :bg-col="bgCol" link="https://www.youtube.com/c/RyanAirth987/featured"><YouTube/></IconLink>
-					<IconLink class="mx-1" :bg-col="bgCol" link="https://www.instagram.com/sweeneygamedev/?hl=en"><Instagram/></IconLink>
+					<IconLink class="mx-1" :class="bgCol" link="https://www.linkedin.com/in/ryanairth-sweeney/" title="LinkedIn Profile" icon-name="LinkedIn"></IconLink>
+					<IconLink class="mx-1" :class="bgCol" link="https://github.com/RyanSweeney987" title="GitHub Page" icon-name="GitHub"></IconLink>
+					<IconLink class="mx-1" :class="bgCol" link="https://www.youtube.com/c/RyanAirth987/featured" title="YouTube Channel" icon-name="YouTube"></IconLink>
+					<IconLink class="mx-1" :class="bgCol" link="https://www.instagram.com/sweeneygamedev/?hl=en" title="Instagram Page" icon-name="Instagram"></IconLink>
 				</div>
 			</div>
 		</template>
@@ -70,10 +66,6 @@ defineProps<{
 		.link {
 			@apply font-bold underline rounded-sm;
 		}
-	}
-
-	a:hover {
-		color: white;
 	}
 
 	.bio-image {

@@ -9,8 +9,9 @@ export interface Mediatypes {
   MediaType?: MediaType;
 }
 
-export const enum MediaType {
+export enum MediaType {
   Image = 0,
   YouTube = 1,
-  GitHub = 2
+  GitHub = 2,
+  YouTubeShort = 3
 }

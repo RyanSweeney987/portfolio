@@ -32,7 +32,7 @@
 	<div class="w-full md:flex md:flex-wrap">
 		<div class="skill-group-container" v-for="(level, index) in skillLevels">
 			<SkillGroup :title="level.name">
-				<IconButton class="m-1" v-for="(skill, index) in skillStore.skills.filter(_ => _.skillLevelId === level.id)" :key="skill.id" :bg-col="bgCol" :icon-name="skill.icon" @on-click="clicked(skill.slug)"/>
+				<IconButton class="m-1" :class="bgCol" v-for="(skill, index) in skillStore.skills.filter(_ => _.skillLevelId === level.id)" :key="skill.id" :icon-name="skill.icon" @on-click="clicked(skill.slug)"/>
 			</SkillGroup>
 		</div>
 		<div class="skill-group-container">

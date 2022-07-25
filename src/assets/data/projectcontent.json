@@ -9,28 +9,28 @@
 					"source": "thesis_result_thumb.png",
 					"alt": "Thumbnail image for thesis result"
 				}, {
-					"typeId": 1,
+					"typeId": 3,
 					"source": "MB76rxbj1ZE",
 					"alt": "Desertation Project Result"
 				}, {
 					"typeId": 2,
-					"source": "https://github.com/RyanSweeney987",
-					"alt": ""
+					"source": "https://github.com/RyanSweeney987/portfolio",
+					"alt": "Github Link"
 				}
 			],
 			"contentDir": "/images/projects/thesis/",
-			"content": "# Thesis Content"
+			"content": "## Summary\nThis project saught to allow a robot to navigate itself using a novel Deep Neural Network. This was achieved by training a model to recognise where I was located in each input image and then move accordingly.\n\n## Hardware\nThe robot used is the **[Pepper Robot from Softbank Robotics](https://www.softbankrobotics.com/emea/en/pepper){.link .background-hover-4}**. The primary camera placed in the head was used. The Python 2.7 SDK was used.\n\n## Robot System\nThe robot system works by running 2 versions of Python and using a web socket to transfer data between them. This is because the Pepper Robot Python SDK uses Python 2.7 whilst the version of TensorFlow used was using Python 3.10. The system connected to the robot takes image data from the robot, sends it to the TensorFlow model which results in a classification. The classification is then returned and used to determine the command. The commands were move left, right and forward, with a fourth movement to stop or don't move.\n\n## Deep Neural Network Model\nThe model consists of Convolutional Neural Network layers followed by a Recurrent Neural Network layer that uses a novel ODE network called a **[Liquid Time Constant network](https://arxiv.org/abs/2006.04439){.link .background-hover-4}**."
 		},{
 			"id": 1,
 			"projectId": 1,
 			"media": [
 				{
 					"typeId": 0,
-					"source": "thesis_result_thumb.png",
+					"source": "city_gen_thumb.png",
 					"alt": ""
 				}, {
 					"typeId": 1,
-					"source": "https://www.youtube.com/shorts/MB76rxbj1ZE",
+					"source": "R6BgegBCPE0",
 					"alt": ""
 				}, {
 					"typeId": 2,
@@ -38,8 +38,8 @@
 					"alt": ""
 				}
 			],
-			"contentDir": "/images/projects/thesis/",
-			"content": "# Thesis Content"
+			"contentDir": "/images/projects/city_generator/",
+			"content": "# City Generator Content"
 		},{
 			"id": 2,
 			"projectId": 2,

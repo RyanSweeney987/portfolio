@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-defineProps<{
-	bgCol: string
-}>()
-
 const emits = defineEmits(['onClick']);
 
 function _onClick() {
@@ -13,7 +9,7 @@ function _onClick() {
 </script>
 
 <template>
-	<button class="card w-full h-full inline-block" v-on:click="_onClick" :class="bgCol" type="button">
+	<button class="card w-full h-full inline-block" v-on:click="_onClick" type="button">
 		<div class="card-image w-full">
 			<slot name="card-image"></slot>
 		</div>

@@ -28,6 +28,16 @@
  	--section-gap: 160px;
 }
 
+/* Swiper colours */
+:root {
+	--swiper-navigation-color: rgba(255, 255, 255, 0.9);
+	--swiper-pagination-color: rgba(255, 255, 255, 0.9);
+	--swiper-pagination-bullet-color: rgba(255, 255, 255, 0.9);
+	--swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.9);
+	--swiper-pagination-bullet-opacity: 1.0;
+	--swiper-pagination-bullet-inactive-opacity: 0.35;
+}
+
 *,
 *::before,
 *::after {

@@ -7,6 +7,8 @@
 @import url("../node_modules/@egjs/flicking-plugins/dist/pagination.css");
 @import url("../node_modules/flicking-plugins/dist/arrow.css"); */
 
+
+
 svg path {
 	fill: var(--color-text);
 }
@@ -45,6 +47,10 @@ button:hover svg path {
 		@apply text-left text-base;
 	}
 
+	a:hover {
+		color: white;
+	}
+
 	a.link {
 		@apply font-bold underline rounded-sm;
 	}
@@ -53,77 +59,17 @@ button:hover svg path {
 		color: white;
 	}
 
-	.card-panel {
-		width: 10rem;
-		height: 10rem;
-		@apply p-1;
+	.swiper-content-container {
+		@apply flex justify-center content-center p-10;
 	}
 
-	.card-panel-content {
-		width: 100%;
-		height: 100%;
-		@apply rounded-lg shadow-md bg-slate-800;
+	.swiper-content-container * {
+		@apply rounded-xl shadow-xl;
 	}
 
-	.flicking-arrow-prev::before, .flicking-arrow-prev::after, 
-	.flicking-arrow-next::before, .flicking-arrow-next::after {
-		border-radius: 10rem;
-	}
-
-	.flicking-pagination {
-		bottom: 10px;
-		left: 0;
-		position: absolute;
-		text-align: center;
-		width: 100%;
-		z-index: 2;
-	}
-
-	/* .flicking-panel {
-		align-items: flex-end;
-		border-radius: 5px;
-		box-sizing: border-box;
-		display: flex;
-		height: 200px;
-		justify-content: start;
-		margin-bottom: 10px;
-		margin-right: 10px;
-		padding: 30px 20px;
-		position: relative;
-		width: 50%;
-	} */
-
-	/*.flicking-pagination-bullet-active {
-		background-color: #f2a65e;
-	}
-
-	.profile-media .flicking-viewport {
-		@apply pb-6 w-full;
-	}
-
-	.card-panel {
-		align-items: flex-start;
-		display: flex;
-		justify-content: flex-end;
-		@apply rounded-xl shadow-md;
-	}
-
-	.card-panel img {
+	.swiper-button-prev, .swiper-button-next {
 		@apply rounded-xl;
 	}
-
-	.panel {
-		@apply w-full aspect-video;
-	}
-
-	.flicking-pagination {
-		bottom: 10px;
-		left: 0;
-		position: absolute;
-		text-align: center;
-		width: 100%;
-		z-index: 2;
-	}*/
 
 	/* Background gradients */
 	.background-1 {
