@@ -5,13 +5,11 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface Mediatypes {
-  MediaType: MediaType;
+export interface Contenttypes {
+  ContentType: ContentType;
 }
 
-export enum MediaType {
-  Image = 0,
-  YouTube = 1,
-  GitHub = 2,
-  YouTubeShort = 3
+export enum ContentType {
+  Project = 0,
+  Work = 1
 }

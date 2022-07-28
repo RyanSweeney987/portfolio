@@ -5,24 +5,34 @@ import Card from "../../components/Card.vue";
 
 import { useProjectStore } from "@/stores/ProjectStore";
 import { useSkillStore } from "@/stores/SkillStore";
+import type { Project } from '@/types/Project';
 
 const projectStore = useProjectStore();
 const skillStore = useSkillStore();
 
 const router = useRouter();
 
-defineProps<{
-	bgCol: string
+const props = defineProps<{
+	bgCol: string,
+	filter?: Function
 }>()
 
 function clicked(slug: string) {
 	router.push({name: "project", params: {slug: slug}});
 }
+
+function filteredProjects() {
+	if(props.filter !== undefined) {
+		return projectStore.projects.filter(props?.filter as any);
+	} else {
+		return projectStore.projects;
+	}
+}
 </script>
 
 <template>
 	<div class="w-full flex flex-wrap projects">
-		<div class="p-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(project, index) in projectStore.projects">
+		<div class="p-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" v-for="(project, index) in filteredProjects()">
 			<Card :class="bgCol" @on-click="clicked(project.slug)">
 				<template v-slot:card-image>
 					<img :src="`/portfolio/thumbs/projects/${project.imgSrc}`" :alt="project.imgAlt"/>

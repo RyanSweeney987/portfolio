@@ -1,6 +1,6 @@
 import type { SkillLevelEnum } from "@/enums/SkillLevelEnum";
 
-export type Skill = {
+export interface Skill {
 	id: number;
 	name: string;
 	slug: string;

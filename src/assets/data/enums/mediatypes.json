@@ -7,7 +7,7 @@
 		}
 	}, 
 	"required": [
-		"MediaType "
+		"MediaType"
 	],
 	"additionalProperties": false
 }

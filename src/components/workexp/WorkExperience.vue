@@ -11,19 +11,28 @@ const skillStore = useSkillStore();
 
 const router = useRouter();
 
-defineProps<{
-	bgCol: string
+const props = defineProps<{
+	bgCol: string,
+	filter?: Function
 }>()
 
 function clicked(slug: string) {
 	router.push(`/work/${slug}`);
 	router.push({name: "work", params: {slug: slug}});
 }
+
+function filteredWorkExp() {
+	if(props.filter !== undefined) {
+		return workStore.works.filter(props.filter as any);
+	} else {
+		return workStore.works;
+	}
+}
 </script>
 
 <template>
 	<div class="w-full flex flex-wrap work-experience">
-		<Card class="m-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" :class="bgCol" v-for="(work, index) in workStore.workexp"  @on-click="clicked(work.slug)">
+		<Card class="m-1 sm:w-1/2 lg:w-1/3 2xl:w-1/4" :class="bgCol" v-for="(work, index) in filteredWorkExp()"  @on-click="clicked(work.slug)">
 			<template v-slot:card-image>
 				<img class="with-background" :src="`/portfolio/thumbs/workexp/${work.imgSrc}`" :alt="work.imgAlt"/>
 			</template>

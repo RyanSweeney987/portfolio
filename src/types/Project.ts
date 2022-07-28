@@ -1,10 +1,5 @@
-export type Project = {
-	id: number;
-	name: string;
-	slug: string;
-	imgSrc: string;
-	imgAlt: string;
+import type { Experience } from "./Experience";
+
+export interface Project extends Experience {
 	date: string;
-	shortDesc: string;
-	skillIds: number[];
 };

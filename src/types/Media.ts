@@ -1,6 +1,6 @@
 import type { MediaType } from "@/enums/MediaTypeEnum";
 
-export type Media = {
+export interface Media{
 	typeId: MediaType;
 	source: string;
 	alt: string;

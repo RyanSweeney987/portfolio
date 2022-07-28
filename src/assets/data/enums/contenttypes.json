@@ -1,0 +1,13 @@
+{	
+	"properties": {
+		"ContentType": {
+			"type": "integer",
+			"enum": [0, 1],
+			"tsEnumNames": ["Project", "Work"]
+		}
+	}, 
+	"required": [
+		"ContentType"
+	],
+	"additionalProperties": false
+}

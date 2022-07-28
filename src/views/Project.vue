@@ -18,6 +18,7 @@
 
 	import { MediaType } from '@/enums/MediaTypeEnum';
 	import type { Media } from '@/types/Media';
+import { ContentType } from '@/enums/ContentTypeEnum';
 
 	const modules = [Navigation, Pagination, Scrollbar, A11y, Virtual];
 
@@ -32,25 +33,26 @@
 	const skillStore = useSkillStore();
 	const contentStore = useContentStore();
 
-	const project = projectStore.projects.find(_ => _.slug === props.slug);
-	const content = contentStore.projectContent.find(_ => _.projectId === project?.id);
+	const project = projectStore.getprojectBySlug(props.slug);
+	const content = project !== undefined ? contentStore.getContentById(ContentType.Project, project.id) : undefined;
 
 	const imgContent = content?.media.filter(_ => _.typeId === MediaType.Image);
 	const youtubeContent = content?.media.filter(_ => _.typeId === MediaType.YouTube);
 	const gitHubLink = content?.media.find(_ => _.typeId === MediaType.GitHub);
 
 	const projectName = computed(_ => {
-		return project !== undefined ? project.name : "project not found";
-	});
-	const projectId = computed(_ => {
-		return project !== undefined ? project.id : -1;
+		return project !== undefined ? project.name : "Project Not Found";
 	});
 	const projectDate = computed(_ => {
-		return project !== undefined ? new Date(project.date).toLocaleDateString() : "";
+		return project !== undefined ? toMonthYear(new Date(project.date)) : "Date Not Found";
 	});
-	const projectMarkdown = computed(_ => {
-		return contentStore.projectContent.find(_ => _.projectId === projectId.value)?.content;
-	});
+
+	function toMonthYear(date: Date) {
+		let m = date.getMonth() + 1;
+		let y = date.getFullYear();
+
+		return m.toString() + "/" + y.toString();
+	}
 
 	function clicked(slug: string) {
 		router.push({name: "skill", params: {slug}});
@@ -87,7 +89,7 @@
 			<h2>Latest activity: {{projectDate}}</h2>
 		</template>
 		<template #profile-body>
-			<MarkdownRenderer v-if="projectMarkdown !== undefined" :markdown="projectMarkdown" class="mb-4"></MarkdownRenderer>
+			<MarkdownRenderer v-if="content !== undefined" :markdown="content.content" class="mb-4"></MarkdownRenderer>
 			<div class="mb-4" v-if="gitHubLink !== undefined">
 				<h2>Repository</h2>
 				<div class="flex">
