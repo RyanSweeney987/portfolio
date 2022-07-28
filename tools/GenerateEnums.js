@@ -40,20 +40,25 @@ var json_schema_to_typescript_1 = require("../node_modules/json-schema-to-typesc
 var fs_1 = require("fs");
 function generate() {
     return __awaiter(this, void 0, void 0, function () {
-        var _a, _b, _c, _d;
-        return __generator(this, function (_e) {
-            switch (_e.label) {
+        var _a, _b, _c, _d, _e, _f;
+        return __generator(this, function (_g) {
+            switch (_g.label) {
                 case 0:
                     _a = fs_1.writeFileSync;
                     _b = ["../src/enums/MediaTypeEnum.ts"];
                     return [4 /*yield*/, (0, json_schema_to_typescript_1.compileFromFile)("../src/assets/data/enums/mediatypes.json")];
                 case 1:
-                    _a.apply(void 0, _b.concat([_e.sent()]));
+                    _a.apply(void 0, _b.concat([_g.sent()]));
                     _c = fs_1.writeFileSync;
                     _d = ["../src/enums/SkillLevelEnum.ts"];
                     return [4 /*yield*/, (0, json_schema_to_typescript_1.compileFromFile)("../src/assets/data/enums/skilllevels.json")];
                 case 2:
-                    _c.apply(void 0, _d.concat([_e.sent()]));
+                    _c.apply(void 0, _d.concat([_g.sent()]));
+                    _e = fs_1.writeFileSync;
+                    _f = ["../src/enums/ContentTypeEnum.ts"];
+                    return [4 /*yield*/, (0, json_schema_to_typescript_1.compileFromFile)("../src/assets/data/enums/contenttypes.json")];
+                case 3:
+                    _e.apply(void 0, _f.concat([_g.sent()]));
                     return [2 /*return*/];
             }
         });
