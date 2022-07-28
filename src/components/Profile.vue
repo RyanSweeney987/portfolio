@@ -30,3 +30,13 @@
 		}
 	}
 </style>
+
+<style>
+	@tailwind components;
+	
+	@layer components {
+		.profile h1, .profile h2, .profile h3 {
+			@apply mt-4
+		}
+	}
+</style>

@@ -4,6 +4,7 @@ export type Project = {
 	slug: string;
 	imgSrc: string;
 	imgAlt: string;
+	date: string;
 	shortDesc: string;
 	skillIds: number[];
 };

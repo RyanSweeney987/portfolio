@@ -9,8 +9,6 @@
 	import MarkdownRenderer from '@/components/MarkdownRenderer.vue';
 	import SkillGroup from '@/components/skills/SkillGroup.vue';
 	import IconLink from "@/components/icons/IconLink.vue";
-	import Icon from "@/components/icons/Icon.vue";
-
 
   	import { Swiper, SwiperSlide } from 'swiper/vue';
 	import { Navigation, Pagination, Scrollbar, A11y, Virtual  } from 'swiper';
@@ -19,7 +17,7 @@
   	import 'swiper/css/pagination';
 
 	import { MediaType } from '@/enums/MediaTypeEnum';
-import type { Media } from '@/types/Media';
+	import type { Media } from '@/types/Media';
 
 	const modules = [Navigation, Pagination, Scrollbar, A11y, Virtual];
 
@@ -47,6 +45,9 @@ import type { Media } from '@/types/Media';
 	const projectId = computed(_ => {
 		return project !== undefined ? project.id : -1;
 	});
+	const projectDate = computed(_ => {
+		return project !== undefined ? new Date(project.date).toLocaleDateString() : "";
+	});
 	const projectMarkdown = computed(_ => {
 		return contentStore.projectContent.find(_ => _.projectId === projectId.value)?.content;
 	});
@@ -70,12 +71,12 @@ import type { Media } from '@/types/Media';
 							<div class="swiper-content-container" v-if="media.typeId === MediaType.Image">
 								<img :src="`${content?.contentDir}${media.source}`" :alt="media.alt"/>
 							</div>
-							<div class="swiper-content-container" v-else-if="media.typeId === MediaType.YouTube">
+							<!-- <div class="swiper-content-container" v-else-if="media.typeId === MediaType.YouTube">
 								<iframe width="1519" height="auto" :src="`https://www.youtube.com/embed/${media.source}`" :title="media.alt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							</div>
 							<div class="swiper-content-container" v-else-if="media.typeId === MediaType.YouTubeShort">
 								<iframe width="321" height="auto" :src="`https://www.youtube.com/embed/${media.source}`" :title="media.alt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</div>
+							</div> -->
 						</SwiperSlide>
 					</Swiper>
 				</div>
@@ -83,11 +84,15 @@ import type { Media } from '@/types/Media';
 		</template>
 		<template #profile-title>
 			<h1>{{projectName}}</h1>
+			<h2>Latest activity: {{projectDate}}</h2>
 		</template>
 		<template #profile-body>
-			<MarkdownRenderer v-if="projectMarkdown !== undefined" :markdown="projectMarkdown"></MarkdownRenderer>
-			<div class="flex">
-				<IconLink v-if="gitHubLink !== undefined" class="mx-1" :class="(route.meta.bgHover as string)" :link="gitHubLink.source" :title="gitHubLink.alt" icon-name="GitHub"></IconLink>
+			<MarkdownRenderer v-if="projectMarkdown !== undefined" :markdown="projectMarkdown" class="mb-4"></MarkdownRenderer>
+			<div class="mb-4" v-if="gitHubLink !== undefined">
+				<h2>Repository</h2>
+				<div class="flex">
+					<IconLink class="mx-1" :class="(route.meta.bgHover as string)" :link="gitHubLink.source" :title="gitHubLink.alt" icon-name="GitHub"></IconLink>
+				</div>
 			</div>
 			<h2>Skills</h2>
 			<div class="flex flex-wrap w-full">

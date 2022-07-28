@@ -4,8 +4,8 @@ export type WorkExp = {
 	slug: string;
 	imgSrc: string;
 	imgAlt: string;
-	startDate: number;
-	endDate: number;
+	startDate: string;
+	endDate: string;
 	shortDesc: string;
 	workTitle: string;
 	skillIds: number[];

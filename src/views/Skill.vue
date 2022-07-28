@@ -26,14 +26,17 @@
 
 	<h1>{{skillId}}</h1>
 	<Profile>
-		<template #profile-media>
-			<!-- Carousel -->
-		</template>
 		<template #profile-title>
-			<!-- Title -->
+			<h1>{{ skillName }}</h1>
 		</template>
 		<template #profile-body>
-			<!-- Body content -->
+			<div v-if="true">
+				<!-- Check work experience and projects for this skill -->
+				<!-- Display respective cards cards -->
+			</div>
+			<div v-else>
+				<h2>No work experience or projects available to highlight the use of {{ skillName }}.</h2>
+			</div>
 		</template>
 	</Profile>
 </template>

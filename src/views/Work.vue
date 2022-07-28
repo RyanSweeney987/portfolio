@@ -59,19 +59,19 @@
 						<div class="swiper-content-container" v-if="media.typeId === MediaType.Image">
 							<img :src="`${content?.contentDir}${media.source}`" :alt="media.alt"/>
 						</div>
-						<div class="swiper-content-container" v-else-if="media.typeId === MediaType.YouTube">
+						<!-- <div class="swiper-content-container" v-else-if="media.typeId === MediaType.YouTube">
 							<iframe width="344" height="611" :src="`https://www.youtube.com/embed/${media.source}`" :title="media.alt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
+						</div> -->
 					</SwiperSlide>
 				</Swiper>
 			</div>
 		</template>
 		<template #profile-title>
 			<h1>{{workName}}</h1>
+			<h2>Title: {{ work?.workTitle }}</h2>
+			<h2>Dates: {{work?.startDate}} - {{ work?.endDate }}</h2>
 		</template>
 		<template #profile-body>
-			<p class="text-white font-bold mb-2">Title: {{ work?.workTitle }}</p>
-			<p class="text-white font-bold mb-2">Date: {{work?.startDate}} - {{ work?.endDate }}</p>
 			<MarkdownRenderer v-if="workMarkdown !== undefined" :markdown="workMarkdown"></MarkdownRenderer>
 			<h2>Skills</h2>
 			<div class="flex flex-wrap w-full">

@@ -6,6 +6,7 @@
 			"slug": "thesis-autonomous-robot-navigation",
 			"imgSrc": "thesis_result_thumb.png",
 			"imgAlt": "Thumbnail of the result for the thesis.",
+			"date": "2022-05-20",
 			"shortDesc": "Thesis that focused on AI and robot navigation.",
 			"skillIds": [13, 15, 21]
 		},
@@ -15,6 +16,7 @@
 			"slug": "city-generator",
 			"imgSrc": "city_gen_thumb.png",
 			"imgAlt": "Thumbnail of City Generator project made in Unity.",
+			"date": "2022-04-22",
 			"shortDesc": "Procedural city generator made with the Unity game engine.",
 			"skillIds": [3, 1, 23]
 		},{
@@ -23,6 +25,7 @@
 			"slug": "underwater-cave",
 			"imgSrc": "underwater_thumb.png",
 			"imgAlt": "Thumbnail of Unerwater Cave project made in Unity.",
+			"date": "2022-04-23",
 			"shortDesc": "Underwater cave scene made with the Unreal Engine 4.",
 			"skillIds": [2, 24]
 		},{
@@ -31,6 +34,7 @@
 			"slug": "asteroid-miner",
 			"imgSrc": "asteroid_miner_thumb.png",
 			"imgAlt": "Thumbnail of Asteroid project made in Unity.",
+			"date": "2019-12-12",
 			"shortDesc": "Small game made in Unity as part of my concept developement module.",
 			"skillIds": [3, 23]
 		},{
@@ -39,6 +43,7 @@
 			"slug": "asteroids-clone",
 			"imgSrc": "asteroids_clone_thumb.png",
 			"imgAlt": "Thumbnail of Asteroids Clone project made in C++ using SDL.",
+			"date": "2020-02-23",
 			"shortDesc": "Small game made in C++ using SDL as part of my game programming module.",
 			"skillIds": [2, 19]
 		},{
@@ -47,6 +52,7 @@
 			"slug": "bulls-and-cows",
 			"imgSrc": "bulls_and_cows_thumb.png",
 			"imgAlt": "Thumbnail of Bulls and Cows project made in C++.",
+			"date": "2016-03-07",
 			"shortDesc": "My first foray into C++ development.",
 			"skillIds": [2]
 		}
