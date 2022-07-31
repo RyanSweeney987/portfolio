@@ -4,6 +4,9 @@ Portfolio © 2022 by Ryan Sweeney is licensed under CC BY-NC-SA 4.0
 This project and all files associated with the original repository are shared under the CC BY-NC-SA 4.0 license.
 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
+This project has very little comments as there isn't much actual programming logic.
+The programming in the form of Typescript that exists in the code are mostly just single lines of code.
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup

@@ -86,7 +86,7 @@ const icons = {
 </script>
 
 <template>
-	<div class="icon-container">
+	<div class="icon-container" :title="_icon">
 		<component class="icon" :is="icons[_icon]"></component>
 	</div>
 

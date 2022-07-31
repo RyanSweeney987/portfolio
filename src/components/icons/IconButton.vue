@@ -13,7 +13,7 @@ function _onClick() {
 </script>
 
 <template>
-	<button class="link-button" v-on:click="_onClick" type="button">
+	<button class="link-button" v-on:click="_onClick" type="button" :title="iconName">
 		<Icon :icon-name="iconName"/>
 	</button>
 </template>

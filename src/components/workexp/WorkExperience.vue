@@ -50,17 +50,13 @@
 				</template>
 				<template v-slot:card-header>
 					<div class="flex justify-between">
-						<h4 class="text-l font-bold text-left">{{work.name}}</h4>
-						<h4 class="text-l text-right" v-if="work.isCurrent">Current</h4>
-						<h4 class="text-l text-right" v-else>{{getYearsWorked(work.startDate, work.endDate)}}</h4>
+						<h4 class="work-name">{{work.name}}</h4>
+						<h4 class="work-time" v-if="work.isCurrent">Current</h4>
+						<h4 class="work-time" v-else>{{getYearsWorked(work.startDate, work.endDate)}}</h4>
 					</div>
 				</template>
 				<template v-slot:card-body>
-					<div class="flex justify-between w-full">
-						<label class="font-bold">Title:</label>
-						<p>{{work.workTitle}}</p>
-					</div>
-					<p>{{work.shortDesc}}</p>
+					<p>{{work.workTitle}} - {{work.shortDesc}}</p>
 				</template>
 				<template v-slot:card-footer>
 					<div class="lang-icon-container w-full overflow-x-scroll h-full">
@@ -73,6 +69,23 @@
 		</div>
 	</div>
 </template>
+
+<style scoped>
+	@tailwind components;
+	
+	@layer components {
+		.work-name {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			@apply font-bold text-left flex-1;
+		}
+
+		.work-time {
+			@apply text-right flex-none pl-2;
+		}
+	}
+</style>
 
 <style>
 	.lang-icon-container {
