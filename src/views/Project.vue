@@ -89,7 +89,7 @@ import { ContentType } from '@/enums/ContentTypeEnum';
 			<h2>Latest activity: {{projectDate}}</h2>
 		</template>
 		<template #profile-body>
-			<MarkdownRenderer v-if="content !== undefined" :markdown="content.content" class="mb-4"></MarkdownRenderer>
+			<MarkdownRenderer v-if="content !== undefined" :markdown="content.content" class="mb-4 header-margin"></MarkdownRenderer>
 			<div class="mb-4" v-if="gitHubLink !== undefined">
 				<h2>Repository</h2>
 				<div class="flex">

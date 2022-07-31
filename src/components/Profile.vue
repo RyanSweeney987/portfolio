@@ -26,7 +26,7 @@
 
 		.profile-content {
 			flex-basis: auto;
-			@apply px-4 pt-2 w-full;
+			@apply px-4 w-full;
 		}
 	}
 </style>
@@ -35,8 +35,12 @@
 	@tailwind components;
 	
 	@layer components {
-		.profile h1, .profile h2, .profile h3 {
+		/*.profile h1, .profile h2, .profile h3 {
 			@apply mt-4
+		}*/
+
+		.header-margin p {
+			@apply mb-4;
 		}
 	}
 </style>

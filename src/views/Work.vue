@@ -17,7 +17,8 @@
 
 	import { MediaType } from '@/enums/MediaTypeEnum';
 	import { ContentType } from '@/enums/ContentTypeEnum';
-import type { Media } from '@/types/Media';
+	import type { Media } from '@/types/Media';
+	import { toMonthYearstr } from '@/utils/utils';
 
 	const modules = [Navigation, Pagination, Scrollbar, A11y, Virtual];
 
@@ -41,18 +42,11 @@ import type { Media } from '@/types/Media';
 		return work !== undefined ? work.name : "Name Not Found";
 	});
 	const workStartDate = computed(_ => {
-		return work !== undefined ? toMonthYear(new Date(work.startDate)) : "Start Date Not Found"
+		return work !== undefined ? toMonthYearstr(work.startDate) : "Start Date Not Found"
 	});
 	const workEndDate = computed(_ => {
-		return work !== undefined ? toMonthYear(new Date(work.endDate)) : "End Date Not Found"
+		return work !== undefined ? toMonthYearstr(work.endDate) : "End Date Not Found"
 	});
-
-	function toMonthYear(date: Date) {
-		let m = date.getMonth() + 1;
-		let y = date.getFullYear();
-
-		return m.toString() + "/" + y.toString();
-	}
 
 	function clicked(slug: string) {
 		router.push({name: "skill", params: {slug}});
@@ -64,7 +58,7 @@ import type { Media } from '@/types/Media';
 </script>
 
 <template>
-	<Profile class="work-profile">
+	<Profile class="work-profile" v-if="work !== undefined">
 		<template #profile-media>
 			<div class="w-full flex justify-center">
 				<div class="w-full md:w-4/5">
@@ -83,11 +77,11 @@ import type { Media } from '@/types/Media';
 		</template>
 		<template #profile-title>
 			<h1>{{workName}}</h1>
-			<h2>Title: {{ work?.workTitle }}</h2>
-			<h2>Dates: {{ workStartDate }} - {{ workEndDate }}</h2>
+			<h2 class="mb-2">Title: {{ work?.workTitle }}</h2>
+			<h2 class="mb-2">Dates: {{ workStartDate }} - {{ workEndDate }}</h2>
 		</template>
 		<template #profile-body>
-			<MarkdownRenderer v-if="content !== undefined" :markdown="content.content"></MarkdownRenderer>
+			<MarkdownRenderer v-if="content !== undefined" :markdown="content.content" class="mb-4 header-margin"></MarkdownRenderer>
 			<h2>Skills</h2>
 			<div class="flex flex-wrap w-full">
 				<SkillGroup>
@@ -96,6 +90,9 @@ import type { Media } from '@/types/Media';
 			</div>
 		</template>
 	</Profile>
+	<div v-else>
+		<h2>Work Not Found!</h2>
+	</div>
 </template>
 
 <style>

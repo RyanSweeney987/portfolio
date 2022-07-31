@@ -14,7 +14,7 @@ const router = useRouter();
 
 const props = defineProps<{
 	bgCol: string,
-	filter?: Function
+	ids?: number[]
 }>()
 
 function clicked(slug: string) {
@@ -22,8 +22,8 @@ function clicked(slug: string) {
 }
 
 function filteredProjects() {
-	if(props.filter !== undefined) {
-		return projectStore.projects.filter(props?.filter as any);
+	if(props.ids !== undefined && props.ids.length > 0) {
+		return projectStore.projects.filter(_ => props.ids?.includes(_.id));
 	} else {
 		return projectStore.projects;
 	}
@@ -63,10 +63,10 @@ function filteredProjects() {
 	}
 
 	.card-body p {
-		height: 3rem;
+		height: 5rem;
 		width: 100%;
 		display: -webkit-box;
-		-webkit-line-clamp: 2;
+		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}

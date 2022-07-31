@@ -7,7 +7,7 @@
 </script>
 
 <template>
-	<ContentSection bg-svg="background-pattern-1" class="background-1">
+	<ContentSection bg-svg="background-pattern-1" class="background-1 mt-8">
 		<template #content>
 			<Bio bg-col="background-hover-1"/>
 		</template>

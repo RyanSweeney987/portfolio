@@ -15,7 +15,6 @@ const route = useRoute();
 		</div>
 	</nav>
 	<div class="page-content">
-		<div class="flex justify-center w-full text-5xl my-10"><p>This site is still a WIP</p></div>
 		<router-view></router-view>
 		<div class="pt-20 pb-5">
 			<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" class="text-center">

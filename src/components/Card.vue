@@ -9,17 +9,17 @@ function _onClick() {
 </script>
 
 <template>
-	<button class="card w-full h-full inline-block" v-on:click="_onClick" type="button">
-		<div class="card-image w-full">
+	<button class="card" v-on:click="_onClick" type="button">
+		<div class="card-image">
 			<slot name="card-image"></slot>
 		</div>
-		<div class="card-header w-full">
+		<div class="card-header">
 			<slot name="card-header"></slot>
 		</div>
-		<div class="card-body w-full">
+		<div class="card-body">
 			<slot name="card-body"></slot>
 		</div>
-		<div class="card-footer w-full">
+		<div class="card-footer">
 			<slot name="card-footer"></slot>
 		</div>
 	</button>
@@ -30,24 +30,25 @@ function _onClick() {
 	
 	@layer components {
 		.card {
-			@apply p-2 rounded-sm;
+			@apply p-2 rounded-sm w-full flex flex-col;
 		}
 
 		.card-image {
 			background: black;
-			@apply mb-4 aspect-video rounded-lg;
+			@apply mb-4 aspect-video rounded-lg w-full;
 		}
 
 		.card-header {
-			@apply mb-2;
+			@apply mb-2 w-full;
 		}
 
 		.card-body {
-			height: 3rem;
-			@apply mb-2;
+			flex-basis: 5rem;
+			@apply mb-2 w-full;
 		}
 
 		.card-footer {
+			@apply w-full;
 		}
 	}
 </style>
