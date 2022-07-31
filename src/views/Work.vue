@@ -45,7 +45,19 @@
 		return work !== undefined ? toMonthYearstr(work.startDate) : "Start Date Not Found"
 	});
 	const workEndDate = computed(_ => {
-		return work !== undefined ? toMonthYearstr(work.endDate) : "End Date Not Found"
+		let dateString = "";
+		
+		if(work !== undefined) {
+			if(work.endDate !== undefined) {
+				dateString = toMonthYearstr(work.endDate);
+			} else {
+				dateString = "End Date Note Found";
+			}
+		} else {
+			dateString = "End Date Note Found";
+		}
+
+		return dateString;
 	});
 
 	function clicked(slug: string) {
