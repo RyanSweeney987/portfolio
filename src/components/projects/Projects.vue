@@ -44,8 +44,10 @@ function filteredProjects() {
 					<p>{{project.shortDesc}}</p>
 				</template>
 				<template v-slot:card-footer>
-					<div class="flex lang-icon-container w-full">
-						<Icon class="mx-1" v-for="(skill, index) in skillStore.skills.filter(_ => project.skillIds.includes(_.id))" :icon-name="skill.icon"/>
+					<div class="lang-icon-container w-full overflow-x-scroll h-full">
+						<div class="w-0 flex overflow-visible">
+							<Icon class="mx-1" v-for="(skill, index) in skillStore.skills.filter(_ => project.skillIds.includes(_.id))" :icon-name="skill.icon"/>
+						</div>
 					</div>
 				</template>
 			</Card>

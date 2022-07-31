@@ -7,11 +7,7 @@
 				{
 					"typeId": 0,
 					"source": "thesis_result_thumb.png",
-					"alt": "Thumbnail image for thesis result"
-				}, {
-					"typeId": 2,
-					"source": "https://github.com/RyanSweeney987/portfolio",
-					"alt": "Github Link"
+					"alt": "Thumbnail image for thesis result."
 				}
 			],
 			"contentDir": "/images/projects/thesis/",
@@ -23,11 +19,11 @@
 				{
 					"typeId": 0,
 					"source": "city_gen_thumb.png",
-					"alt": ""
+					"alt": "Thumbnail image for the City Generator project."
 				}, {
 					"typeId": 2,
 					"source": "https://github.com/RyanSweeney987/City_Generator",
-					"alt": ""
+					"alt": "GitHub link for the City Generator repository."
 				}
 			],
 			"contentDir": "/images/projects/city_generator/",
@@ -39,11 +35,11 @@
 				{
 					"typeId": 0,
 					"source": "underwater_thumb.png",
-					"alt": ""
+					"alt": "Thumbnail image for the Underwater Cave project."
 				}, {
 					"typeId": 2,
 					"source": "https://github.com/RyanSweeney987/Underwater_Cave",
-					"alt": ""
+					"alt": "GitHub link for the Underwater Cave repository."
 				}
 			],
 			"contentDir": "/images/projects/underwater_cave/",
@@ -55,15 +51,15 @@
 				{
 					"typeId": 0,
 					"source": "asteroid_miner_thumb.png",
-					"alt": ""
+					"alt": "Thumbnail image for the Asteroid Miner project."
 				}, {
 					"typeId": 2,
 					"source": "https://github.com/RyanSweeney987/Asteroid_Miner",
-					"alt": ""
+					"alt": "GitHub link for the Asteroid Miner repository."
 				}
 			],
 			"contentDir": "/images/projects/asteroid_miner/",
-			"content": "## University Module\nConcept Development\n\n## Summary\n"
+			"content": "## University Module\nConcept Development\n\n## Summary\nDeveloped as the 3rd experiment in the module, this was created as a prototype implementation of paper prototypes and written descriptions of the game loop."
 		},{
 			"id": 4,
 			"projectId": 4,
@@ -71,15 +67,15 @@
 				{
 					"typeId": 0,
 					"source": "asteroids_clone_thumb.png",
-					"alt": ""
+					"alt": "Thumbnail image for the Asteroids Clone project."
 				}, {
 					"typeId": 2,
 					"source": "https://github.com/RyanSweeney987/Asteroids_Clone",
-					"alt": ""
+					"alt": "GitHub link for the Asteroids Clone repository."
 				}
 			],
 			"contentDir": "/images/projects/asteroids_clone/",
-			"content": "## University Module\nGame Programming\n\n## Summary\n"
+			"content": "## University Module\nGame Programming\n\n## Summary\nThis project's purpose was to apply programming patterns within the context of game development."
 		},{
 			"id": 5,
 			"projectId": 5,
@@ -87,15 +83,43 @@
 				{
 					"typeId": 0,
 					"source": "bulls_and_cows_thumb.png",
-					"alt": ""
+					"alt": "Thumbnail image for the Bulls and Cows project."
 				}, {
 					"typeId": 2,
 					"source": "https://github.com/RyanSweeney987/Bulls_and_Cows",
-					"alt": ""
+					"alt": "GitHub link for the Bulls and Cows repository."
 				}
 			],
 			"contentDir": "/images/projects/bulls_and_cows/",
 			"content": "## Summary\nCreated as one of my first adventures into C++ and game development programming. This was created as part of a Udemy Unreal Engine 4 course."
+		},{
+			"id": 6,
+			"projectId": 6,
+			"media": [
+				{
+					"typeId": 0,
+					"source": "portfolio_website_thumb.png",
+					"alt": "Thumbnail image for the protfolio website project."
+				}, {
+					"typeId": 2,
+					"source": "https://github.com/RyanSweeney987/portfolio",
+					"alt": "GitHub link for the portfolio website repository."
+				}
+			],
+			"contentDir": "/images/projects/portfolio_website/",
+			"content": "## Summary\nCreated as means of highlighting the work experience I have gained and the projects I have worked on. The website also serves as a means of further practice in web development and may serve as a future platform for any software that I develop."
+		},{
+			"id": 7,
+			"projectId": 7,
+			"media": [
+				{
+					"typeId": 0,
+					"source": "jayne_orr_foot_clinic_thumb.png",
+					"alt": "Thumbnail image for the Jayne Orr Foot Clinic website."
+				}
+			],
+			"contentDir": "/images/projects/jayne_orr_foot_clinic/",
+			"content": "## Summary\nCreated as a group project on my course at Donegal ETB's Business Administration and eBusiness. The project was to create a website for a commecial business."
 		}
 	]
 }

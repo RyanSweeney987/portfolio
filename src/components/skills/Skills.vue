@@ -37,11 +37,11 @@
 		</div>
 		<div class="skill-group-container">
 			<SkillGroup title="Portfolio Made With">
-				<IconButton class="m-1" @on-click="clicked('vuejs')" :bg-col="bgCol" icon-name="VueJS"/>
-				<IconButton class="m-1" @on-click="clicked('html')" :bg-col="bgCol" icon-name="HTML"/>
-				<IconButton class="m-1" @on-click="clicked('typescript')" :bg-col="bgCol" icon-name="Typescript"/>
-				<IconButton class="m-1" @on-click="clicked('css')" :bg-col="bgCol" icon-name="CSS"/>
-				<IconButton class="m-1" @on-click="clicked('tailwind')" :bg-col="bgCol" icon-name="Tailwind"/>
+				<IconButton class="m-1" :class="bgCol" @on-click="clicked('vuejs')"  icon-name="VueJS"/>
+				<IconButton class="m-1" :class="bgCol" @on-click="clicked('html')" icon-name="HTML"/>
+				<IconButton class="m-1" :class="bgCol" @on-click="clicked('typescript')" icon-name="Typescript"/>
+				<IconButton class="m-1" :class="bgCol" @on-click="clicked('css')" icon-name="CSS"/>
+				<IconButton class="m-1" :class="bgCol" @on-click="clicked('tailwind')" icon-name="Tailwind"/>
 			</SkillGroup>
 		</div>
 	</div>

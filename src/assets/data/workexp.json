@@ -12,9 +12,18 @@
 			"shortDesc": "Full-stack development",
 			"workTitle": "Developer",
 			"skillIds": [0, 3, 4, 5, 6, 7, 12, 18, 22]
+		}, {
+			"id": 1,
+			"name": "Soon",
+			"slug": "soon",
+			"imgSrc": "soon.png",
+			"imgAlt": "Soon logo.",
+			"startDate": "2022-08-01",
+			"endDate": "2022-08-01",
+			"isCurrent": true,
+			"shortDesc": "Full-stack development",
+			"workTitle": "Developer",
+			"skillIds": [3, 5, 12]
 		}
 	]
 }
-
-
-

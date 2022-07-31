@@ -27,6 +27,8 @@ import Java from "./prog-langs/Java.vue";
 import Rust from "./prog-langs/Rust.vue";
 import Angular from "./prog-langs/Angular.vue";
 import SDL from "./prog-langs/SDL.vue";
+import PHP from "./prog-langs/PHP.vue";
+import WordPress from "./prog-langs/WordPress.vue";
 // Social
 import GitHub from "./social/GitHub.vue";
 import Instagram from "./social/Instagram.vue";
@@ -70,6 +72,8 @@ const icons = {
 	Rust,
 	Angular,
 	SDL,
+	PHP,
+	WordPress,
 	// Social
 	GitHub,
 	Instagram,

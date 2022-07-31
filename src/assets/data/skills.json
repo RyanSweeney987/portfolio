@@ -5,209 +5,169 @@
 			"name": "Angular",
 			"slug": "angular",
 			"icon": "Angular",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 1,
 			"name": "Blender",
 			"slug": "blender",
 			"icon": "Blender",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 2,
 			"name": "C++",
 			"slug": "c-plus-plus",
 			"icon": "CPlusPlus",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 3,
 			"name": "C#",
 			"slug": "c-sharp",
 			"icon": "CSharp",
-			"skillLevelId": 0,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 0
 		},{
 			"id": 4,
 			"name": "CSS",
 			"slug": "css",
 			"icon": "CSS",
-			"skillLevelId": 0,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 0
 		},{
 			"id": 5,
 			"name": ".Net",
 			"slug": "dot-net",
 			"icon": "DotNet",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 6,
 			"name": ".Net Core",
 			"slug": "dot-net-core",
 			"icon": "DotNetCore",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 7,
 			"name": "HTML",
 			"slug": "html",
 			"icon": "HTML",
-			"skillLevelId": 0,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 0
 		},{
 			"id": 8,
 			"name": "Java",
 			"slug": "java",
 			"icon": "Java",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 9,
 			"name": "Javascript",
 			"slug": "javascript",
 			"icon": "Javascript",
-			"skillLevelId": 0,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 0
 		},{
 			"id": 10,
 			"name": "JQuery",
 			"slug": "jquery",
 			"icon": "JQuery",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 11,
 			"name": "Jupyter",
 			"slug": "jupyter",
 			"icon": "Jupyter",
-			"skillLevelId": 2,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 2
 		},{
 			"id": 12,
 			"name": "MySQL",
 			"slug": "mysql",
 			"icon": "MySQL",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 13,
 			"name": "OpenCV",
 			"slug": "opencv",
 			"icon": "OpenCV",
-			"skillLevelId": 2,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 2
 		},{
 			"id": 14,
 			"name": "OpenGL",
 			"slug": "opengl",
 			"icon": "OpenGL",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 15,
 			"name": "Python",
 			"slug": "python",
 			"icon": "Python",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 16,
 			"name": "R",
 			"slug": "r",
 			"icon": "R",
-			"skillLevelId": 2,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 2
 		},{
 			"id": 17,
 			"name": "Rust",
 			"slug": "rust",
 			"icon": "Rust",
-			"skillLevelId": 2,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 2
 		},{
 			"id": 18,
 			"name": "SASS",
 			"slug": "sass",
 			"icon": "SASS",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 19,
 			"name": "SDL",
 			"slug": "sdl",
 			"icon": "SDL",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 20,
 			"name": "Tailwind",
 			"slug": "tailwind",
 			"icon": "Tailwind",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 21,
 			"name": "TensorFlow",
 			"slug": "tensorflow",
 			"icon": "Tensorflow",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
 		},{
 			"id": 22,
 			"name": "Typescript",
 			"slug": "typescript",
 			"icon": "Typescript",
-			"skillLevelId": 0,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 0
 		},{
 			"id": 23,
 			"name": "Unity",
 			"slug": "unity",
 			"icon": "Unity",
-			"skillLevelId": 0,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 0
 		},{
 			"id": 24,
 			"name": "Unreal Engine 4 & 5",
 			"slug": "unreal-engine",
 			"icon": "UnrealEngine",
-			"skillLevelId": 0,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 0
 		},{
 			"id": 25,
 			"name": "VueJS",
 			"slug": "vuejs",
 			"icon": "VueJS",
-			"skillLevelId": 1,
-			"workIds": [],
-			"projectIds": []
+			"skillLevelId": 1
+		},{
+			"id": 26,
+			"name": "PHP",
+			"slug": "php",
+			"icon": "PHP",
+			"skillLevelId": 1
+		},{
+			"id": 27,
+			"name": "WordPress",
+			"slug": "wordpress",
+			"icon": "WordPress",
+			"skillLevelId": 1
 		}
 	]
 }

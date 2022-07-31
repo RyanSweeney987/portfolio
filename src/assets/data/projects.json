@@ -55,6 +55,24 @@
 			"date": "2016-03-07",
 			"shortDesc": "My first foray into C++ development.",
 			"skillIds": [2]
+		}, {
+			"id": 6,
+			"name": "Portfolio Website",
+			"slug": "portfolio-website",
+			"imgSrc": "portfolio_website_thumb.png",
+			"imgAlt": "Thumbnail of Portfolio website made using VueJS and Typescript.",
+			"date": "2022-07-31",
+			"shortDesc": "Portfolio website to highlight work experience and projects both past and present.",
+			"skillIds": [4, 7, 20, 22, 25]
+		}, {
+			"id": 7,
+			"name": "Jayne Orr Foot Clinic",
+			"slug": "jayne-orr-foot-clinic",
+			"imgSrc": "jayne_orr_foot_clinic_thumb.png",
+			"imgAlt": "Thumbnail of the Jayne Orr Foot Clinic website.",
+			"date": "2017-05-02",
+			"shortDesc": "Group project to make a website for a commercial business.",
+			"skillIds": [4, 7, 9, 10, 26, 27]
 		}
 	]	
 }
