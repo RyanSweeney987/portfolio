@@ -8,15 +8,15 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig({
 	plugins: [vue(), vueJsx()],
 	resolve: {
-		alias: [
-			// {
-			// '@': fileURLToPath(new URL('./src', import.meta.url))
-			// },
-			{
-				find: './runtimeConfig',
-				replacement: './runtimeConfig.browser',
-			}
-		]
+		alias: {
+			'@': fileURLToPath(new URL('./src', import.meta.url))
+		},
+		// alias: [
+		// 	{
+		// 		find: './runtimeConfig',
+		// 		replacement: './runtimeConfig.browser',
+		// 	}
+		// ]
 	},
 	base: "/portfolio/"
 })
