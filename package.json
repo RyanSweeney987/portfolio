@@ -10,7 +10,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@aws-amplify/ui-vue": "^3.1.9",
     "@headlessui/vue": "^1.6.5",
+    "aws-amplify": "^5.0.16",
     "devicon": "^2.15.1",
     "json-schema-to-typescript": "^11.0.1",
     "markdown-it": "^13.0.1",

@@ -2,6 +2,8 @@
 	"extends": "@vue/tsconfig/tsconfig.web.json",
 	"include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
 	"compilerOptions": {
+		"outDir": "./dist",
+		"allowJs": true,
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["./src/*", "./*"]
@@ -12,7 +14,8 @@
 		"lib": [
 			"ES2021.String"
 		],
-		"isolatedModules": false
+		"isolatedModules": false,
+		"skipLibCheck": true
 	},
 	"references": [
 		{
