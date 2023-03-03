@@ -10,7 +10,7 @@
 					"alt": "Thumbnail image for thesis result."
 				}
 			],
-			"contentDir": "/images/projects/thesis/",
+			"contentDir": "/portfolio/images/projects/thesis/",
 			"content": "## University Module\nProject/Thesis\n## Summary\nThis project saught to allow a robot to navigate itself using a novel Deep Neural Network. This was achieved by training a model to recognise where I was located in each input image and then move accordingly.\n\n## Hardware\nThe robot used is the **[Pepper Robot from Softbank Robotics](https://www.softbankrobotics.com/emea/en/pepper){.link .background-hover-4}**. The primary camera placed in the head was used. The Python 2.7 SDK was used.\n\n## Robot System\nThe robot system works by running 2 versions of Python and using a web socket to transfer data between them. This is because the Pepper Robot Python SDK uses Python 2.7 whilst the version of TensorFlow used was using Python 3.10. The system connected to the robot takes image data from the robot, sends it to the TensorFlow model which results in a classification. The classification is then returned and used to determine the command. The commands were move left, right and forward, with a fourth movement to stop or don't move.\n\n## Deep Neural Network Model\nThe model consists of Convolutional Neural Network layers followed by a Recurrent Neural Network layer that uses a novel ODE network called a **[Liquid Time Constant network](https://arxiv.org/abs/2006.04439){.link .background-hover-4}**."
 		},{
 			"id": 1,
@@ -26,7 +26,7 @@
 					"alt": "GitHub link for the City Generator repository."
 				}
 			],
-			"contentDir": "/images/projects/city_generator/",
+			"contentDir": "/portfolio/images/projects/city_generator/",
 			"content": "## University Module\nProcedural Content Generation\n\n## Summary\nFor this module, we were tasked with creating a diorama with the theme \"Alternative History\". For this I decided to work on a concept that explored the possibility of electricity being mass utilised centuries earlier. To this end, I chose Industrial Era Britain as the overall core theme. This is because during this time, steam was the large driving force and it would be interesting to see how things may look with a greater emphasis on electricity.\n\n## Prodecural Generation\nGeneration of the city consisted of several steps. Evenly distributed points are generated using **[Poisson Disk Sampling](http://devmag.org.za/2009/05/03/poisson-disk-sampling/){.link .background-hover-4}**, from these points a set of **[Delaunay Triangulation](https://en.wikipedia.org/wiki/Delaunay_triangulation){.link .background-hover-4}** triangles and it's corresponding dual graph **[Voronoi Diagram](https://en.wikipedia.org/wiki/Voronoi_diagram){.link .background-hover-4}** were generated. This was chose because of it's naturalistic results. The dots from the circumcenter of each triangles which corresponded to the voronoi cell edge points were used to represent streets. Each voronoi cell was then assigned a district. These districts consisted of residential, industrial, special and park. A commercial district was planned but I ran out of time for implementation. Building generation was built on a voxel like system where each voxel consisted of a window, door, roof section etc and was then randomised with some limits to ensure things such as doors were created. Each district also included a tower based on the design for the **[Old Stockholm telephone tower](https://en.wikipedia.org/wiki/Old_Stockholm_telephone_tower){.link .background-hover-4}** as a means of power transfer. The only special building that was implemented is the **[Crystal Palace](https://en.wikipedia.org/wiki/The_Crystal_Palace){.link .background-hover-4}**"
 		},{
 			"id": 2,
@@ -42,7 +42,7 @@
 					"alt": "GitHub link for the Underwater Cave repository."
 				}
 			],
-			"contentDir": "/images/projects/underwater_cave/",
+			"contentDir": "/portfolio/images/projects/underwater_cave/",
 			"content": "## University Module\nGraphics\n\n## Summary\n This project served as the second project that was developed to learn some principles of graphics programming, in particular, using Unreal Engine 4 and the various graphics components such as materials and post-process effects.\n\n## Scene\nThe scene is an underwater cave scene that consists of **[Megascans](https://quixel.com/megascans){.link .background-hover-4}** assets for the foliage and pillars an animated cube and a number of fish swimming around. The fish are controlled by **[boids](https://en.wikipedia.org/wiki/Boids){.link .background-hover-4}**. The boids are set up via C++ rather than Blueprints due to the performance."
 		},{
 			"id": 3,
@@ -58,7 +58,7 @@
 					"alt": "GitHub link for the Asteroid Miner repository."
 				}
 			],
-			"contentDir": "/images/projects/asteroid_miner/",
+			"contentDir": "/portfolio/images/projects/asteroid_miner/",
 			"content": "## University Module\nConcept Development\n\n## Summary\nDeveloped as the 3rd experiment in the module, this was created as a prototype implementation of paper prototypes and written descriptions of the game loop."
 		},{
 			"id": 4,
@@ -74,7 +74,7 @@
 					"alt": "GitHub link for the Asteroids Clone repository."
 				}
 			],
-			"contentDir": "/images/projects/asteroids_clone/",
+			"contentDir": "/portfolio/images/projects/asteroids_clone/",
 			"content": "## University Module\nGame Programming\n\n## Summary\nThis project's purpose was to apply programming patterns within the context of game development."
 		},{
 			"id": 5,
@@ -90,7 +90,7 @@
 					"alt": "GitHub link for the Bulls and Cows repository."
 				}
 			],
-			"contentDir": "/images/projects/bulls_and_cows/",
+			"contentDir": "/portfolio/images/projects/bulls_and_cows/",
 			"content": "## Summary\nCreated as one of my first adventures into C++ and game development programming. This was created as part of a Udemy Unreal Engine 4 course."
 		},{
 			"id": 6,
@@ -106,7 +106,7 @@
 					"alt": "GitHub link for the portfolio website repository."
 				}
 			],
-			"contentDir": "/images/projects/portfolio_website/",
+			"contentDir": "/portfolio/images/projects/portfolio_website/",
 			"content": "## Summary\nCreated as means of highlighting the work experience I have gained and the projects I have worked on. The website also serves as a means of further practice in web development and may serve as a future platform for any software that I develop."
 		},{
 			"id": 7,
@@ -118,7 +118,7 @@
 					"alt": "Thumbnail image for the Jayne Orr Foot Clinic website."
 				}
 			],
-			"contentDir": "/images/projects/jayne_orr_foot_clinic/",
+			"contentDir": "/portfolio/images/projects/jayne_orr_foot_clinic/",
 			"content": "## Summary\nCreated as a group project on my course at Donegal ETB's Business Administration and eBusiness. The project was to create a website for a commecial business."
 		}
 	]
